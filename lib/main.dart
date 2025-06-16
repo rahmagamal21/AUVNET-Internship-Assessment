@@ -1,5 +1,6 @@
-import 'package:auvnet_task/E-commerce/presentation/views/splash_screen.dart';
+import 'package:auvnet_task/features/getting%20started/presentation/views/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SplashScreen());
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      builder: (context, child) {
+        return MaterialApp(
+          home: SplashScreen(),
+          debugShowCheckedModeBanner: false,
+        );
+      },
+    );
   }
 }
