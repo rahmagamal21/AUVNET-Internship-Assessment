@@ -17,7 +17,7 @@ class Styles {
   }
 
   static TextStyle rubikMedium() {
-    return TextStyle(fontFamily: rubikFont, fontWeight: FontWeight.w500);
+    return const TextStyle(fontFamily: rubikFont, fontWeight: FontWeight.w500);
   }
 
   static TextStyle rubikBold() {

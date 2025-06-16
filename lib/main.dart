@@ -1,6 +1,10 @@
+import 'package:auvnet_task/features/getting%20started/presentation/controller/getting_started/getting_started_bloc.dart';
 import 'package:auvnet_task/features/getting%20started/presentation/views/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'features/getting started/presentation/controller/getting_started/getting_started_event.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +15,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      builder: (context, child) {
-        return MaterialApp(
-          home: SplashScreen(),
-          debugShowCheckedModeBanner: false,
-        );
-      },
+    return BlocProvider(
+      create: (context) =>
+          GettingStartedBloc()..add(const GettingStartedEvent.started()),
+      child: ScreenUtilInit(
+        designSize: const Size(375, 812),
+        builder: (context, child) {
+          return const MaterialApp(
+            home: SplashScreen(),
+            debugShowCheckedModeBanner: false,
+          );
+        },
+      ),
     );
   }
 }
