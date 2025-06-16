@@ -17,44 +17,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$GettingStartedState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() showLogo,
-    required TResult Function() showOnboarding,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? showLogo,
-    TResult? Function()? showOnboarding,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showLogo,
-    TResult Function()? showOnboarding,
-    required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(ShowLogo value) showLogo,
-    required TResult Function(ShowOnboarding value) showOnboarding,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(ShowLogo value)? showLogo,
-    TResult? Function(ShowOnboarding value)? showOnboarding,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(ShowLogo value)? showLogo,
-    TResult Function(ShowOnboarding value)? showOnboarding,
-    required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  int get index => throw _privateConstructorUsedError;
+
+  /// Create a copy of GettingStartedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GettingStartedStateCopyWith<GettingStartedState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -63,6 +32,8 @@ abstract class $GettingStartedStateCopyWith<$Res> {
     GettingStartedState value,
     $Res Function(GettingStartedState) then,
   ) = _$GettingStartedStateCopyWithImpl<$Res, GettingStartedState>;
+  @useResult
+  $Res call({int index});
 }
 
 /// @nodoc
@@ -77,343 +48,105 @@ class _$GettingStartedStateCopyWithImpl<$Res, $Val extends GettingStartedState>
 
   /// Create a copy of GettingStartedState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? index = null}) {
+    return _then(
+      _value.copyWith(
+            index: null == index
+                ? _value.index
+                : index // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
+  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-    _$InitialImpl value,
-    $Res Function(_$InitialImpl) then,
-  ) = __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$GettingStartedStateImplCopyWith<$Res>
+    implements $GettingStartedStateCopyWith<$Res> {
+  factory _$$GettingStartedStateImplCopyWith(
+    _$GettingStartedStateImpl value,
+    $Res Function(_$GettingStartedStateImpl) then,
+  ) = __$$GettingStartedStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int index});
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$GettingStartedStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-    _$InitialImpl _value,
-    $Res Function(_$InitialImpl) _then,
+class __$$GettingStartedStateImplCopyWithImpl<$Res>
+    extends _$GettingStartedStateCopyWithImpl<$Res, _$GettingStartedStateImpl>
+    implements _$$GettingStartedStateImplCopyWith<$Res> {
+  __$$GettingStartedStateImplCopyWithImpl(
+    _$GettingStartedStateImpl _value,
+    $Res Function(_$GettingStartedStateImpl) _then,
   ) : super(_value, _then);
 
   /// Create a copy of GettingStartedState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? index = null}) {
+    return _then(
+      _$GettingStartedStateImpl(
+        index: null == index
+            ? _value.index
+            : index // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
-class _$InitialImpl implements Initial {
-  const _$InitialImpl();
+class _$GettingStartedStateImpl implements _GettingStartedState {
+  const _$GettingStartedStateImpl({required this.index});
+
+  @override
+  final int index;
 
   @override
   String toString() {
-    return 'GettingStartedState.initial()';
+    return 'GettingStartedState(index: $index)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$GettingStartedStateImpl &&
+            (identical(other.index, index) || other.index == index));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() showLogo,
-    required TResult Function() showOnboarding,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? showLogo,
-    TResult? Function()? showOnboarding,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showLogo,
-    TResult Function()? showOnboarding,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(ShowLogo value) showLogo,
-    required TResult Function(ShowOnboarding value) showOnboarding,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(ShowLogo value)? showLogo,
-    TResult? Function(ShowOnboarding value)? showOnboarding,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(ShowLogo value)? showLogo,
-    TResult Function(ShowOnboarding value)? showOnboarding,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Initial implements GettingStartedState {
-  const factory Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$ShowLogoImplCopyWith<$Res> {
-  factory _$$ShowLogoImplCopyWith(
-    _$ShowLogoImpl value,
-    $Res Function(_$ShowLogoImpl) then,
-  ) = __$$ShowLogoImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShowLogoImplCopyWithImpl<$Res>
-    extends _$GettingStartedStateCopyWithImpl<$Res, _$ShowLogoImpl>
-    implements _$$ShowLogoImplCopyWith<$Res> {
-  __$$ShowLogoImplCopyWithImpl(
-    _$ShowLogoImpl _value,
-    $Res Function(_$ShowLogoImpl) _then,
-  ) : super(_value, _then);
+  int get hashCode => Object.hash(runtimeType, index);
 
   /// Create a copy of GettingStartedState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GettingStartedStateImplCopyWith<_$GettingStartedStateImpl> get copyWith =>
+      __$$GettingStartedStateImplCopyWithImpl<_$GettingStartedStateImpl>(
+        this,
+        _$identity,
+      );
 }
 
-/// @nodoc
-
-class _$ShowLogoImpl implements ShowLogo {
-  const _$ShowLogoImpl();
-
-  @override
-  String toString() {
-    return 'GettingStartedState.showLogo()';
-  }
+abstract class _GettingStartedState implements GettingStartedState {
+  const factory _GettingStartedState({required final int index}) =
+      _$GettingStartedStateImpl;
 
   @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ShowLogoImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() showLogo,
-    required TResult Function() showOnboarding,
-  }) {
-    return showLogo();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? showLogo,
-    TResult? Function()? showOnboarding,
-  }) {
-    return showLogo?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showLogo,
-    TResult Function()? showOnboarding,
-    required TResult orElse(),
-  }) {
-    if (showLogo != null) {
-      return showLogo();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(ShowLogo value) showLogo,
-    required TResult Function(ShowOnboarding value) showOnboarding,
-  }) {
-    return showLogo(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(ShowLogo value)? showLogo,
-    TResult? Function(ShowOnboarding value)? showOnboarding,
-  }) {
-    return showLogo?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(ShowLogo value)? showLogo,
-    TResult Function(ShowOnboarding value)? showOnboarding,
-    required TResult orElse(),
-  }) {
-    if (showLogo != null) {
-      return showLogo(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ShowLogo implements GettingStartedState {
-  const factory ShowLogo() = _$ShowLogoImpl;
-}
-
-/// @nodoc
-abstract class _$$ShowOnboardingImplCopyWith<$Res> {
-  factory _$$ShowOnboardingImplCopyWith(
-    _$ShowOnboardingImpl value,
-    $Res Function(_$ShowOnboardingImpl) then,
-  ) = __$$ShowOnboardingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShowOnboardingImplCopyWithImpl<$Res>
-    extends _$GettingStartedStateCopyWithImpl<$Res, _$ShowOnboardingImpl>
-    implements _$$ShowOnboardingImplCopyWith<$Res> {
-  __$$ShowOnboardingImplCopyWithImpl(
-    _$ShowOnboardingImpl _value,
-    $Res Function(_$ShowOnboardingImpl) _then,
-  ) : super(_value, _then);
+  int get index;
 
   /// Create a copy of GettingStartedState
   /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ShowOnboardingImpl implements ShowOnboarding {
-  const _$ShowOnboardingImpl();
-
   @override
-  String toString() {
-    return 'GettingStartedState.showOnboarding()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ShowOnboardingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() showLogo,
-    required TResult Function() showOnboarding,
-  }) {
-    return showOnboarding();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? showLogo,
-    TResult? Function()? showOnboarding,
-  }) {
-    return showOnboarding?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showLogo,
-    TResult Function()? showOnboarding,
-    required TResult orElse(),
-  }) {
-    if (showOnboarding != null) {
-      return showOnboarding();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(ShowLogo value) showLogo,
-    required TResult Function(ShowOnboarding value) showOnboarding,
-  }) {
-    return showOnboarding(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(ShowLogo value)? showLogo,
-    TResult? Function(ShowOnboarding value)? showOnboarding,
-  }) {
-    return showOnboarding?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(ShowLogo value)? showLogo,
-    TResult Function(ShowOnboarding value)? showOnboarding,
-    required TResult orElse(),
-  }) {
-    if (showOnboarding != null) {
-      return showOnboarding(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ShowOnboarding implements GettingStartedState {
-  const factory ShowOnboarding() = _$ShowOnboardingImpl;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GettingStartedStateImplCopyWith<_$GettingStartedStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

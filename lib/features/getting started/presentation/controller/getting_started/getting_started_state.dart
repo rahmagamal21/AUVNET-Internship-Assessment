@@ -5,7 +5,8 @@ part 'getting_started_state.freezed.dart';
 
 @freezed
 class GettingStartedState with _$GettingStartedState {
-  const factory GettingStartedState.initial() = Initial;
-  const factory GettingStartedState.showLogo() = ShowLogo;
-  const factory GettingStartedState.showOnboarding() = ShowOnboarding;
+  const factory GettingStartedState({required int index}) =
+      _GettingStartedState;
+
+  factory GettingStartedState.initial() => const GettingStartedState(index: -1);
 }

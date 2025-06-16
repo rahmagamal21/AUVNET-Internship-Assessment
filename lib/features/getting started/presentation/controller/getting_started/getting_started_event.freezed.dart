@@ -21,32 +21,44 @@ mixin _$GettingStartedEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() logoShown,
+    required TResult Function() nextPressed,
+    required TResult Function() skipPressed,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? logoShown,
+    TResult? Function()? nextPressed,
+    TResult? Function()? skipPressed,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? logoShown,
+    TResult Function()? nextPressed,
+    TResult Function()? skipPressed,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Started value) started,
     required TResult Function(LogoShown value) logoShown,
+    required TResult Function(NextPressed value) nextPressed,
+    required TResult Function(SkipPressed value) skipPressed,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Started value)? started,
     TResult? Function(LogoShown value)? logoShown,
+    TResult? Function(NextPressed value)? nextPressed,
+    TResult? Function(SkipPressed value)? skipPressed,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Started value)? started,
     TResult Function(LogoShown value)? logoShown,
+    TResult Function(NextPressed value)? nextPressed,
+    TResult Function(SkipPressed value)? skipPressed,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
 }
@@ -118,6 +130,8 @@ class _$StartedImpl implements Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() logoShown,
+    required TResult Function() nextPressed,
+    required TResult Function() skipPressed,
   }) {
     return started();
   }
@@ -127,6 +141,8 @@ class _$StartedImpl implements Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? logoShown,
+    TResult? Function()? nextPressed,
+    TResult? Function()? skipPressed,
   }) {
     return started?.call();
   }
@@ -136,6 +152,8 @@ class _$StartedImpl implements Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? logoShown,
+    TResult Function()? nextPressed,
+    TResult Function()? skipPressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -149,6 +167,8 @@ class _$StartedImpl implements Started {
   TResult map<TResult extends Object?>({
     required TResult Function(Started value) started,
     required TResult Function(LogoShown value) logoShown,
+    required TResult Function(NextPressed value) nextPressed,
+    required TResult Function(SkipPressed value) skipPressed,
   }) {
     return started(this);
   }
@@ -158,6 +178,8 @@ class _$StartedImpl implements Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Started value)? started,
     TResult? Function(LogoShown value)? logoShown,
+    TResult? Function(NextPressed value)? nextPressed,
+    TResult? Function(SkipPressed value)? skipPressed,
   }) {
     return started?.call(this);
   }
@@ -167,6 +189,8 @@ class _$StartedImpl implements Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Started value)? started,
     TResult Function(LogoShown value)? logoShown,
+    TResult Function(NextPressed value)? nextPressed,
+    TResult Function(SkipPressed value)? skipPressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -225,6 +249,8 @@ class _$LogoShownImpl implements LogoShown {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() logoShown,
+    required TResult Function() nextPressed,
+    required TResult Function() skipPressed,
   }) {
     return logoShown();
   }
@@ -234,6 +260,8 @@ class _$LogoShownImpl implements LogoShown {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? logoShown,
+    TResult? Function()? nextPressed,
+    TResult? Function()? skipPressed,
   }) {
     return logoShown?.call();
   }
@@ -243,6 +271,8 @@ class _$LogoShownImpl implements LogoShown {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? logoShown,
+    TResult Function()? nextPressed,
+    TResult Function()? skipPressed,
     required TResult orElse(),
   }) {
     if (logoShown != null) {
@@ -256,6 +286,8 @@ class _$LogoShownImpl implements LogoShown {
   TResult map<TResult extends Object?>({
     required TResult Function(Started value) started,
     required TResult Function(LogoShown value) logoShown,
+    required TResult Function(NextPressed value) nextPressed,
+    required TResult Function(SkipPressed value) skipPressed,
   }) {
     return logoShown(this);
   }
@@ -265,6 +297,8 @@ class _$LogoShownImpl implements LogoShown {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Started value)? started,
     TResult? Function(LogoShown value)? logoShown,
+    TResult? Function(NextPressed value)? nextPressed,
+    TResult? Function(SkipPressed value)? skipPressed,
   }) {
     return logoShown?.call(this);
   }
@@ -274,6 +308,8 @@ class _$LogoShownImpl implements LogoShown {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Started value)? started,
     TResult Function(LogoShown value)? logoShown,
+    TResult Function(NextPressed value)? nextPressed,
+    TResult Function(SkipPressed value)? skipPressed,
     required TResult orElse(),
   }) {
     if (logoShown != null) {
@@ -285,4 +321,242 @@ class _$LogoShownImpl implements LogoShown {
 
 abstract class LogoShown implements GettingStartedEvent {
   const factory LogoShown() = _$LogoShownImpl;
+}
+
+/// @nodoc
+abstract class _$$NextPressedImplCopyWith<$Res> {
+  factory _$$NextPressedImplCopyWith(
+    _$NextPressedImpl value,
+    $Res Function(_$NextPressedImpl) then,
+  ) = __$$NextPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NextPressedImplCopyWithImpl<$Res>
+    extends _$GettingStartedEventCopyWithImpl<$Res, _$NextPressedImpl>
+    implements _$$NextPressedImplCopyWith<$Res> {
+  __$$NextPressedImplCopyWithImpl(
+    _$NextPressedImpl _value,
+    $Res Function(_$NextPressedImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of GettingStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NextPressedImpl implements NextPressed {
+  const _$NextPressedImpl();
+
+  @override
+  String toString() {
+    return 'GettingStartedEvent.nextPressed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NextPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() logoShown,
+    required TResult Function() nextPressed,
+    required TResult Function() skipPressed,
+  }) {
+    return nextPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? logoShown,
+    TResult? Function()? nextPressed,
+    TResult? Function()? skipPressed,
+  }) {
+    return nextPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? logoShown,
+    TResult Function()? nextPressed,
+    TResult Function()? skipPressed,
+    required TResult orElse(),
+  }) {
+    if (nextPressed != null) {
+      return nextPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(LogoShown value) logoShown,
+    required TResult Function(NextPressed value) nextPressed,
+    required TResult Function(SkipPressed value) skipPressed,
+  }) {
+    return nextPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(LogoShown value)? logoShown,
+    TResult? Function(NextPressed value)? nextPressed,
+    TResult? Function(SkipPressed value)? skipPressed,
+  }) {
+    return nextPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(LogoShown value)? logoShown,
+    TResult Function(NextPressed value)? nextPressed,
+    TResult Function(SkipPressed value)? skipPressed,
+    required TResult orElse(),
+  }) {
+    if (nextPressed != null) {
+      return nextPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NextPressed implements GettingStartedEvent {
+  const factory NextPressed() = _$NextPressedImpl;
+}
+
+/// @nodoc
+abstract class _$$SkipPressedImplCopyWith<$Res> {
+  factory _$$SkipPressedImplCopyWith(
+    _$SkipPressedImpl value,
+    $Res Function(_$SkipPressedImpl) then,
+  ) = __$$SkipPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SkipPressedImplCopyWithImpl<$Res>
+    extends _$GettingStartedEventCopyWithImpl<$Res, _$SkipPressedImpl>
+    implements _$$SkipPressedImplCopyWith<$Res> {
+  __$$SkipPressedImplCopyWithImpl(
+    _$SkipPressedImpl _value,
+    $Res Function(_$SkipPressedImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of GettingStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SkipPressedImpl implements SkipPressed {
+  const _$SkipPressedImpl();
+
+  @override
+  String toString() {
+    return 'GettingStartedEvent.skipPressed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SkipPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() logoShown,
+    required TResult Function() nextPressed,
+    required TResult Function() skipPressed,
+  }) {
+    return skipPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? logoShown,
+    TResult? Function()? nextPressed,
+    TResult? Function()? skipPressed,
+  }) {
+    return skipPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? logoShown,
+    TResult Function()? nextPressed,
+    TResult Function()? skipPressed,
+    required TResult orElse(),
+  }) {
+    if (skipPressed != null) {
+      return skipPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(LogoShown value) logoShown,
+    required TResult Function(NextPressed value) nextPressed,
+    required TResult Function(SkipPressed value) skipPressed,
+  }) {
+    return skipPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(LogoShown value)? logoShown,
+    TResult? Function(NextPressed value)? nextPressed,
+    TResult? Function(SkipPressed value)? skipPressed,
+  }) {
+    return skipPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(LogoShown value)? logoShown,
+    TResult Function(NextPressed value)? nextPressed,
+    TResult Function(SkipPressed value)? skipPressed,
+    required TResult orElse(),
+  }) {
+    if (skipPressed != null) {
+      return skipPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SkipPressed implements GettingStartedEvent {
+  const factory SkipPressed() = _$SkipPressedImpl;
 }

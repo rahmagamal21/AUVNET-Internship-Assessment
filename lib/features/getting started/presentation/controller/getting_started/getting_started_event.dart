@@ -7,4 +7,6 @@ part 'getting_started_event.freezed.dart';
 class GettingStartedEvent with _$GettingStartedEvent {
   const factory GettingStartedEvent.started() = Started;
   const factory GettingStartedEvent.logoShown() = LogoShown;
+  const factory GettingStartedEvent.nextPressed() = NextPressed;
+  const factory GettingStartedEvent.skipPressed() = SkipPressed;
 }
