@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
@@ -8,6 +9,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   AuthBloc() : super(const AuthState.initial()) {
     on<LoginPressed>(_onLoginPressed);
@@ -19,15 +21,25 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     Emitter<AuthState> emit,
   ) async {
     emit(const AuthState.loading());
+    try {
+      await _auth.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text,
+      );
 
-    await Future.delayed(const Duration(seconds: 1));
-
-    if (emailController.text == 'test@mail.com' &&
-        passwordController.text == '123456') {
       emit(const AuthState.success());
-    } else {
-      emit(const AuthState.failure('Invalid email or password'));
+    } on FirebaseAuthException catch (e) {
+      emit(AuthState.failure(e.message ?? 'Login failed'));
     }
+
+    // await Future.delayed(const Duration(seconds: 1));
+
+    // if (emailController.text == 'test@mail.com' &&
+    //     passwordController.text == '123456') {
+    //   emit(const AuthState.success());
+    // } else {
+    //   emit(const AuthState.failure('Invalid email or password'));
+    // }
   }
 
   FutureOr<void> _onSignUpPressed(
@@ -35,15 +47,30 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     Emitter<AuthState> emit,
   ) async {
     emit(const AuthState.loading());
+    try {
+      if (passwordController.text != confirmPasswordController.text) {
+        emit(const AuthState.failure('Passwords do not match'));
+        return;
+      }
 
-    await Future.delayed(const Duration(seconds: 1));
+      await _auth.createUserWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text,
+      );
 
-    if (passwordController.text != confirmPasswordController.text) {
-      emit(const AuthState.failure('Passwords do not match'));
-      return;
+      emit(const AuthState.success());
+    } on FirebaseAuthException catch (e) {
+      emit(AuthState.failure(e.message ?? 'Sign up failed'));
     }
 
-    emit(const AuthState.success());
+    // await Future.delayed(const Duration(seconds: 1));
+
+    // if (passwordController.text != confirmPasswordController.text) {
+    //   emit(const AuthState.failure('Passwords do not match'));
+    //   return;
+    // }
+
+    //emit(const AuthState.success());
   }
 
   @override
