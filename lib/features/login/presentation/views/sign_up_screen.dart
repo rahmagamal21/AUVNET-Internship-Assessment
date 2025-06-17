@@ -17,76 +17,121 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final formKey = GlobalKey<FormState>();
     return Scaffold(
       backgroundColor: AppColors.white,
       body: SafeArea(
         child: BlocProvider(
           create: (_) => AuthBloc(),
-          child: BlocBuilder<AuthBloc, AuthState>(
-            builder: (context, state) {
-              final bloc = context.read<AuthBloc>();
-              return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SizedBox(height: 60.h),
-                      Image.asset('assets/images/logo.png', height: 336.h),
+          child: BlocListener<AuthBloc, AuthState>(
+            listener: (context, state) {
+              if (state is AuthFailure) {
+                ScaffoldMessenger.of(
+                  context,
+                ).showSnackBar(SnackBar(content: Text(state.message)));
+              }
 
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Column(
-                          children: [
-                            CustomTextField(
-                              controller: bloc.emailController,
-                              hintText: 'Email',
-                              icon: Icons.mail_outline,
-                            ),
-                            SizedBox(height: 16.h),
-                            CustomTextField(
-                              hintText: 'Password',
-                              icon: Icons.lock_outline,
-                              controller: bloc.passwordController,
-                              obscureText: true,
-                            ),
-                            SizedBox(height: 16.h),
-                            CustomTextField(
-                              hintText: 'Confirm Password',
-                              icon: Icons.lock_outline,
-                              controller: bloc.confirmPasswordController,
-                              obscureText: true,
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      SizedBox(height: 32.h),
-                      StartButton(
-                        text: 'Sign Up',
-                        textStyle: Styles.dmSansMedium().copyWith(
-                          color: AppColors.white,
-                        ),
-                        onPressed: () {
-                          bloc.add(const AuthEvent.signUpPressed());
-                        },
-                      ),
-                      SizedBox(height: 16.h),
-                      CustomTextButton(
-                        text: 'Login',
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const LoginScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              );
+              if (state is AuthSuccess) {}
             },
+            child: BlocBuilder<AuthBloc, AuthState>(
+              builder: (context, state) {
+                final bloc = context.read<AuthBloc>();
+                if (state is AuthLoading) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                return Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 60.h),
+                        Image.asset('assets/images/logo.png', height: 336.h),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Form(
+                            key: formKey,
+                            child: Column(
+                              children: [
+                                CustomTextField(
+                                  controller: bloc.emailController,
+                                  hintText: 'Email',
+                                  icon: Icons.mail_outline,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Enter email';
+                                    }
+                                    if (!value.contains('@')) {
+                                      return 'Invalid email';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                SizedBox(height: 16.h),
+                                CustomTextField(
+                                  hintText: 'Password',
+                                  icon: Icons.lock_outline,
+                                  controller: bloc.passwordController,
+                                  obscureText: true,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Enter password';
+                                    }
+                                    if (value.length < 6) {
+                                      return 'Password too short';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                SizedBox(height: 16.h),
+                                CustomTextField(
+                                  hintText: 'Confirm Password',
+                                  icon: Icons.lock_outline,
+                                  controller: bloc.confirmPasswordController,
+                                  obscureText: true,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Confirm your password';
+                                    }
+                                    if (value != bloc.passwordController.text) {
+                                      return 'Passwords do not match';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(height: 32.h),
+                        StartButton(
+                          text: 'Sign Up',
+                          textStyle: Styles.dmSansMedium().copyWith(
+                            color: AppColors.white,
+                          ),
+                          onPressed: () {
+                            bloc.add(const AuthEvent.signUpPressed());
+                          },
+                        ),
+                        SizedBox(height: 16.h),
+                        CustomTextButton(
+                          text: 'Login',
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const LoginScreen(),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
           ),
         ),
       ),

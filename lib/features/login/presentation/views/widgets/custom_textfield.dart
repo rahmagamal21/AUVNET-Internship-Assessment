@@ -11,17 +11,23 @@ class CustomTextField extends StatelessWidget {
     required this.hintText,
     this.icon,
     this.obscureText = false,
+    this.validator,
   });
 
   final TextEditingController? controller;
   final String hintText;
   final IconData? icon;
   final bool obscureText;
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       controller: controller,
+      obscureText: obscureText,
+      validator: validator,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: Styles.mulishLight(),
