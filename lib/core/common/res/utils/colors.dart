@@ -9,4 +9,5 @@ class AppColors {
   static const Color lightBlack = Color(0xFF333333);
   static const Color grey = Color.fromRGBO(0, 0, 0, 0.5);
   static const Color userName = Color(0xFFFAFAFA);
+  static Color inputFieldColor = Color(0xFFC4C4C4).withOpacity(0.2);
 }

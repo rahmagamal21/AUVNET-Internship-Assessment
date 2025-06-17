@@ -3,11 +3,12 @@ import 'package:auvnet_task/features/login/presentation/views/login_screen.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../../../core/common/res/utils/colors.dart';
 import '../controller/getting_started/getting_started_bloc.dart';
 import '../controller/getting_started/getting_started_event.dart';
 import '../controller/getting_started/getting_started_state.dart';
+import 'widgets/on_boarding_image.dart';
+import 'widgets/start_button.dart';
 
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});
@@ -32,33 +33,8 @@ class OnboardingScreen extends StatelessWidget {
         builder: (context, state) {
           return Column(
             children: [
-              SizedBox(
-                height: 447.h,
-                width: double.infinity,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      left: 0,
-                      top: 0,
-                      child: SvgPicture.asset(
-                        'assets/images/on_boarding.svg',
-                        height: 447.h,
-                        fit: BoxFit.fitHeight,
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Image.asset(
-                        'assets/images/logo.png',
-                        width: 336.w,
-                        height: 336.h,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const OnboardingImage(),
 
-              //SizedBox(height: 40.h),
               Expanded(
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -80,35 +56,23 @@ class OnboardingScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       const Spacer(),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            context.read<GettingStartedBloc>().add(
-                              const GettingStartedEvent.skipPressed(),
-                            );
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LoginScreen(),
-                              ),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryColor,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.r),
-                            ),
-                            padding: EdgeInsets.symmetric(vertical: 16.h),
-                          ),
-                          child: Text(
-                            'Get Started',
-                            style: Styles.rubikMedium().copyWith(
-                              fontSize: 18.sp,
-                              color: AppColors.white,
-                            ),
-                          ),
+                      StartButton(
+                        text: 'Get Started',
+                        textStyle: Styles.rubikMedium().copyWith(
+                          fontSize: 18.sp,
+                          color: AppColors.white,
                         ),
+                        onPressed: () {
+                          context.read<GettingStartedBloc>().add(
+                            const GettingStartedEvent.skipPressed(),
+                          );
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ),
+                          );
+                        },
                       ),
                       SizedBox(height: 12.h),
                       if (state.index < 2)

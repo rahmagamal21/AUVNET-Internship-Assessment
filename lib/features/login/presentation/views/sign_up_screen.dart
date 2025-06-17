@@ -1,5 +1,6 @@
 import 'package:auvnet_task/core/common/res/utils/styles.dart';
 import 'package:auvnet_task/features/getting%20started/presentation/views/widgets/start_button.dart';
+import 'package:auvnet_task/features/login/presentation/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,12 +9,11 @@ import '../../../../core/common/res/utils/colors.dart';
 import '../controller/auth/auth_bloc.dart';
 import '../controller/auth/auth_event.dart';
 import '../controller/auth/auth_state.dart';
-import 'sign_up_screen.dart';
 import 'widgets/custom_text_button.dart';
 import 'widgets/custom_textfield.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       SizedBox(height: 60.h),
                       Image.asset('assets/images/logo.png', height: 336.h),
-                      // SizedBox(height: 60.h),
+
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: Column(
@@ -49,28 +49,35 @@ class LoginScreen extends StatelessWidget {
                               controller: bloc.passwordController,
                               obscureText: true,
                             ),
+                            SizedBox(height: 16.h),
+                            CustomTextField(
+                              hintText: 'Confirm Password',
+                              icon: Icons.lock_outline,
+                              controller: bloc.confirmPasswordController,
+                              obscureText: true,
+                            ),
                           ],
                         ),
                       ),
 
                       SizedBox(height: 32.h),
                       StartButton(
-                        text: 'Login',
+                        text: 'Sign Up',
                         textStyle: Styles.dmSansMedium().copyWith(
                           color: AppColors.white,
                         ),
                         onPressed: () {
-                          bloc.add(const AuthEvent.loginPressed());
+                          bloc.add(const AuthEvent.signUpPressed());
                         },
                       ),
                       SizedBox(height: 16.h),
                       CustomTextButton(
-                        text: 'Create an account',
+                        text: 'Login',
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => const SignUpScreen(),
+                              builder: (_) => const LoginScreen(),
                             ),
                           );
                         },

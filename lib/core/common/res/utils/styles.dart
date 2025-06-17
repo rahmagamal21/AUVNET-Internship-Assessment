@@ -40,7 +40,7 @@ class Styles {
   static TextStyle dmSansBold() {
     return TextStyle(
       fontFamily: dmsansFont,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w900,
       fontSize: 20.0.sp,
     );
   }
