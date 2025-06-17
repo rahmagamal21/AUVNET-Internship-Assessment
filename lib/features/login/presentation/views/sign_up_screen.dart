@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/common/res/utils/colors.dart';
+import '../../../Home/presentation/views/home_screen.dart';
 import '../controller/auth/auth_bloc.dart';
 import '../controller/auth/auth_event.dart';
 import '../controller/auth/auth_state.dart';
@@ -31,7 +32,12 @@ class SignUpScreen extends StatelessWidget {
                 ).showSnackBar(SnackBar(content: Text(state.message)));
               }
 
-              if (state is AuthSuccess) {}
+              if (state is AuthSuccess) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const HomeScreen()),
+                );
+              }
             },
             child: BlocBuilder<AuthBloc, AuthState>(
               builder: (context, state) {
@@ -111,7 +117,9 @@ class SignUpScreen extends StatelessWidget {
                             color: AppColors.white,
                           ),
                           onPressed: () {
-                            bloc.add(const AuthEvent.signUpPressed());
+                            if (formKey.currentState!.validate()) {
+                              bloc.add(const AuthEvent.signUpPressed());
+                            }
                           },
                         ),
                         SizedBox(height: 16.h),

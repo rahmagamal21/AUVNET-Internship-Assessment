@@ -32,7 +32,7 @@ class Styles {
   static TextStyle dmSansMedium() {
     return TextStyle(
       fontFamily: dmsansFont,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       fontSize: 14.0.sp,
     );
   }
