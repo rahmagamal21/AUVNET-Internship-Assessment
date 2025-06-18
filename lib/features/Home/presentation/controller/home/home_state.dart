@@ -1,3 +1,4 @@
+import 'package:auvnet_task/features/Home/domain/entities/user_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../domain/entities/banner_entity.dart';
@@ -12,6 +13,7 @@ class HomeState with _$HomeState {
     @Default([]) List<BannerEntity> banners,
     @Default([]) List<RestaurantEntity> restaurants,
     @Default([]) List<ServiceEntity> services,
+    UserEntity? currentUser,
     @Default(0) int currentBannerIndex,
     String? error,
     @Default(false) bool isBannersLoading,

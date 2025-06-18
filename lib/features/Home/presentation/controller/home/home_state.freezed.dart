@@ -20,6 +20,7 @@ mixin _$HomeState {
   List<BannerEntity> get banners => throw _privateConstructorUsedError;
   List<RestaurantEntity> get restaurants => throw _privateConstructorUsedError;
   List<ServiceEntity> get services => throw _privateConstructorUsedError;
+  UserEntity? get currentUser => throw _privateConstructorUsedError;
   int get currentBannerIndex => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   bool get isBannersLoading => throw _privateConstructorUsedError;
@@ -42,6 +43,7 @@ abstract class $HomeStateCopyWith<$Res> {
     List<BannerEntity> banners,
     List<RestaurantEntity> restaurants,
     List<ServiceEntity> services,
+    UserEntity? currentUser,
     int currentBannerIndex,
     String? error,
     bool isBannersLoading,
@@ -68,6 +70,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? banners = null,
     Object? restaurants = null,
     Object? services = null,
+    Object? currentUser = freezed,
     Object? currentBannerIndex = null,
     Object? error = freezed,
     Object? isBannersLoading = null,
@@ -88,6 +91,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
                 ? _value.services
                 : services // ignore: cast_nullable_to_non_nullable
                       as List<ServiceEntity>,
+            currentUser: freezed == currentUser
+                ? _value.currentUser
+                : currentUser // ignore: cast_nullable_to_non_nullable
+                      as UserEntity?,
             currentBannerIndex: null == currentBannerIndex
                 ? _value.currentBannerIndex
                 : currentBannerIndex // ignore: cast_nullable_to_non_nullable
@@ -127,6 +134,7 @@ abstract class _$$HomeStateImplCopyWith<$Res>
     List<BannerEntity> banners,
     List<RestaurantEntity> restaurants,
     List<ServiceEntity> services,
+    UserEntity? currentUser,
     int currentBannerIndex,
     String? error,
     bool isBannersLoading,
@@ -152,6 +160,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? banners = null,
     Object? restaurants = null,
     Object? services = null,
+    Object? currentUser = freezed,
     Object? currentBannerIndex = null,
     Object? error = freezed,
     Object? isBannersLoading = null,
@@ -172,6 +181,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
             ? _value._services
             : services // ignore: cast_nullable_to_non_nullable
                   as List<ServiceEntity>,
+        currentUser: freezed == currentUser
+            ? _value.currentUser
+            : currentUser // ignore: cast_nullable_to_non_nullable
+                  as UserEntity?,
         currentBannerIndex: null == currentBannerIndex
             ? _value.currentBannerIndex
             : currentBannerIndex // ignore: cast_nullable_to_non_nullable
@@ -204,6 +217,7 @@ class _$HomeStateImpl implements _HomeState {
     final List<BannerEntity> banners = const [],
     final List<RestaurantEntity> restaurants = const [],
     final List<ServiceEntity> services = const [],
+    this.currentUser,
     this.currentBannerIndex = 0,
     this.error,
     this.isBannersLoading = false,
@@ -241,6 +255,8 @@ class _$HomeStateImpl implements _HomeState {
   }
 
   @override
+  final UserEntity? currentUser;
+  @override
   @JsonKey()
   final int currentBannerIndex;
   @override
@@ -257,7 +273,7 @@ class _$HomeStateImpl implements _HomeState {
 
   @override
   String toString() {
-    return 'HomeState(banners: $banners, restaurants: $restaurants, services: $services, currentBannerIndex: $currentBannerIndex, error: $error, isBannersLoading: $isBannersLoading, isRestaurantsLoading: $isRestaurantsLoading, isServicesLoading: $isServicesLoading)';
+    return 'HomeState(banners: $banners, restaurants: $restaurants, services: $services, currentUser: $currentUser, currentBannerIndex: $currentBannerIndex, error: $error, isBannersLoading: $isBannersLoading, isRestaurantsLoading: $isRestaurantsLoading, isServicesLoading: $isServicesLoading)';
   }
 
   @override
@@ -271,6 +287,8 @@ class _$HomeStateImpl implements _HomeState {
               _restaurants,
             ) &&
             const DeepCollectionEquality().equals(other._services, _services) &&
+            (identical(other.currentUser, currentUser) ||
+                other.currentUser == currentUser) &&
             (identical(other.currentBannerIndex, currentBannerIndex) ||
                 other.currentBannerIndex == currentBannerIndex) &&
             (identical(other.error, error) || other.error == error) &&
@@ -288,6 +306,7 @@ class _$HomeStateImpl implements _HomeState {
     const DeepCollectionEquality().hash(_banners),
     const DeepCollectionEquality().hash(_restaurants),
     const DeepCollectionEquality().hash(_services),
+    currentUser,
     currentBannerIndex,
     error,
     isBannersLoading,
@@ -309,6 +328,7 @@ abstract class _HomeState implements HomeState {
     final List<BannerEntity> banners,
     final List<RestaurantEntity> restaurants,
     final List<ServiceEntity> services,
+    final UserEntity? currentUser,
     final int currentBannerIndex,
     final String? error,
     final bool isBannersLoading,
@@ -322,6 +342,8 @@ abstract class _HomeState implements HomeState {
   List<RestaurantEntity> get restaurants;
   @override
   List<ServiceEntity> get services;
+  @override
+  UserEntity? get currentUser;
   @override
   int get currentBannerIndex;
   @override

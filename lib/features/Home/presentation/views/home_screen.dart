@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common/res/service/injection.dart';
 import '../../domain/usecases/get_banner_usecase.dart';
 import '../../domain/usecases/get_service_usecase.dart';
+import '../../domain/usecases/get_user_usecase.dart';
 import '../controller/home/home_bloc.dart';
 import '../controller/home/home_event.dart';
 import 'widgets/banner_slider.dart';
@@ -29,10 +30,12 @@ class HomeScreen extends StatelessWidget {
                 getIt<GetBannersUseCase>(),
                 getIt<GetRestaurantsUseCase>(),
                 getIt<GetServicesUseCase>(),
+                getIt<GetUserUseCase>(),
               )
               ..add(const GetBannersEvent())
               ..add(const GetRestaurantsEvent())
-              ..add(const GetServicesEvent()),
+              ..add(const GetServicesEvent())
+              ..add(const GetCurrentUserEvent()),
 
         child: ListView(
           children: [
