@@ -1,7 +1,12 @@
 import 'package:auvnet_task/core/common/res/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/common/res/service/injection.dart';
+import '../../domain/usecases/get_banner_usecase.dart';
+import '../controller/home/home_bloc.dart';
+import '../controller/home/home_event.dart';
 import 'widgets/banner_slider.dart';
 import 'widgets/code_card.dart';
 import 'widgets/header.dart';
@@ -16,21 +21,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          const Header(),
-          SizedBox(height: 10.h),
-          const Services(),
-          SizedBox(height: 16.h),
-          const CodeCard(),
-          SizedBox(height: 16.h),
-          const ShortCuts(),
-          SizedBox(height: 16.h),
-          const BannerSlider(),
-          SizedBox(height: 16.h),
-          const Restaurants(),
-          SizedBox(height: 40.h),
-        ],
+      body: BlocProvider(
+        create: (context) =>
+            HomeBloc(getIt<GetBannersUseCase>())..add(const GetBannersEvent()),
+
+        child: ListView(
+          children: [
+            const Header(),
+            SizedBox(height: 10.h),
+            const Services(),
+            SizedBox(height: 16.h),
+            const CodeCard(),
+            SizedBox(height: 16.h),
+            const ShortCuts(),
+            SizedBox(height: 16.h),
+            const BannerSlider(),
+            SizedBox(height: 16.h),
+            const Restaurants(),
+            SizedBox(height: 40.h),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,

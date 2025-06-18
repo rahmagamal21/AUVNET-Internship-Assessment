@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/common/res/service/injection.dart';
 import 'features/getting started/presentation/controller/getting_started/getting_started_event.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await configureDependencies();
   runApp(const MyApp());
 }
 
