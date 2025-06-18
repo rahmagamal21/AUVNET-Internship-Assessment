@@ -12,12 +12,20 @@
 import 'package:auvnet_task/core/common/res/service/app_module.dart' as _i635;
 import 'package:auvnet_task/features/Home/data/data%20sources/remote/banner_remote_datasource.dart'
     as _i86;
+import 'package:auvnet_task/features/Home/data/data%20sources/remote/restaurant_remote_datasources.dart'
+    as _i640;
 import 'package:auvnet_task/features/Home/data/repositories/banner_repository_impl.dart'
     as _i1035;
+import 'package:auvnet_task/features/Home/data/repositories/restaurant_repository_impl.dart'
+    as _i475;
 import 'package:auvnet_task/features/Home/domain/repositories/banner_repository.dart'
     as _i681;
+import 'package:auvnet_task/features/Home/domain/repositories/restaurant_repository.dart'
+    as _i190;
 import 'package:auvnet_task/features/Home/domain/usecases/get_banner_usecase.dart'
     as _i653;
+import 'package:auvnet_task/features/Home/domain/usecases/get_restaurant_usecase.dart'
+    as _i321;
 import 'package:auvnet_task/features/Home/presentation/controller/home/home_bloc.dart'
     as _i339;
 import 'package:cloud_firestore/cloud_firestore.dart' as _i974;
@@ -36,14 +44,28 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i86.BannerRemoteDataSource>(
       () => _i86.BannerRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()),
     );
+    gh.lazySingleton<_i640.RestaurantRemoteDataSource>(
+      () => _i640.RestaurantRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()),
+    );
+    gh.lazySingleton<_i190.RestaurantRepository>(
+      () => _i475.RestaurantRepositoryImpl(
+        gh<_i640.RestaurantRemoteDataSource>(),
+      ),
+    );
     gh.lazySingleton<_i681.BannerRepository>(
       () => _i1035.BannerRepositoryImpl(gh<_i86.BannerRemoteDataSource>()),
     );
     gh.factory<_i653.GetBannersUseCase>(
       () => _i653.GetBannersUseCase(gh<_i681.BannerRepository>()),
     );
+    gh.factory<_i321.GetRestaurantsUseCase>(
+      () => _i321.GetRestaurantsUseCase(gh<_i190.RestaurantRepository>()),
+    );
     gh.factory<_i339.HomeBloc>(
-      () => _i339.HomeBloc(gh<_i653.GetBannersUseCase>()),
+      () => _i339.HomeBloc(
+        gh<_i653.GetBannersUseCase>(),
+        gh<_i321.GetRestaurantsUseCase>(),
+      ),
     );
     return this;
   }

@@ -21,6 +21,7 @@ mixin _$HomeState {
   bool get isLoading => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   int get currentBannerIndex => throw _privateConstructorUsedError;
+  List<RestaurantEntity> get restaurants => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -39,6 +40,7 @@ abstract class $HomeStateCopyWith<$Res> {
     bool isLoading,
     String? error,
     int currentBannerIndex,
+    List<RestaurantEntity> restaurants,
   });
 }
 
@@ -61,6 +63,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? isLoading = null,
     Object? error = freezed,
     Object? currentBannerIndex = null,
+    Object? restaurants = null,
   }) {
     return _then(
       _value.copyWith(
@@ -80,6 +83,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
                 ? _value.currentBannerIndex
                 : currentBannerIndex // ignore: cast_nullable_to_non_nullable
                       as int,
+            restaurants: null == restaurants
+                ? _value.restaurants
+                : restaurants // ignore: cast_nullable_to_non_nullable
+                      as List<RestaurantEntity>,
           )
           as $Val,
     );
@@ -100,6 +107,7 @@ abstract class _$$HomeStateImplCopyWith<$Res>
     bool isLoading,
     String? error,
     int currentBannerIndex,
+    List<RestaurantEntity> restaurants,
   });
 }
 
@@ -121,6 +129,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? error = freezed,
     Object? currentBannerIndex = null,
+    Object? restaurants = null,
   }) {
     return _then(
       _$HomeStateImpl(
@@ -140,6 +149,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
             ? _value.currentBannerIndex
             : currentBannerIndex // ignore: cast_nullable_to_non_nullable
                   as int,
+        restaurants: null == restaurants
+            ? _value._restaurants
+            : restaurants // ignore: cast_nullable_to_non_nullable
+                  as List<RestaurantEntity>,
       ),
     );
   }
@@ -153,7 +166,9 @@ class _$HomeStateImpl implements _HomeState {
     required this.isLoading,
     this.error,
     required this.currentBannerIndex,
-  }) : _banners = banners;
+    required final List<RestaurantEntity> restaurants,
+  }) : _banners = banners,
+       _restaurants = restaurants;
 
   final List<BannerEntity> _banners;
   @override
@@ -169,10 +184,17 @@ class _$HomeStateImpl implements _HomeState {
   final String? error;
   @override
   final int currentBannerIndex;
+  final List<RestaurantEntity> _restaurants;
+  @override
+  List<RestaurantEntity> get restaurants {
+    if (_restaurants is EqualUnmodifiableListView) return _restaurants;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_restaurants);
+  }
 
   @override
   String toString() {
-    return 'HomeState(banners: $banners, isLoading: $isLoading, error: $error, currentBannerIndex: $currentBannerIndex)';
+    return 'HomeState(banners: $banners, isLoading: $isLoading, error: $error, currentBannerIndex: $currentBannerIndex, restaurants: $restaurants)';
   }
 
   @override
@@ -185,7 +207,11 @@ class _$HomeStateImpl implements _HomeState {
                 other.isLoading == isLoading) &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.currentBannerIndex, currentBannerIndex) ||
-                other.currentBannerIndex == currentBannerIndex));
+                other.currentBannerIndex == currentBannerIndex) &&
+            const DeepCollectionEquality().equals(
+              other._restaurants,
+              _restaurants,
+            ));
   }
 
   @override
@@ -195,6 +221,7 @@ class _$HomeStateImpl implements _HomeState {
     isLoading,
     error,
     currentBannerIndex,
+    const DeepCollectionEquality().hash(_restaurants),
   );
 
   /// Create a copy of HomeState
@@ -212,6 +239,7 @@ abstract class _HomeState implements HomeState {
     required final bool isLoading,
     final String? error,
     required final int currentBannerIndex,
+    required final List<RestaurantEntity> restaurants,
   }) = _$HomeStateImpl;
 
   @override
@@ -222,6 +250,8 @@ abstract class _HomeState implements HomeState {
   String? get error;
   @override
   int get currentBannerIndex;
+  @override
+  List<RestaurantEntity> get restaurants;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

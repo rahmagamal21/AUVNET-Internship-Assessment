@@ -1,4 +1,5 @@
 import 'package:auvnet_task/core/common/res/utils/colors.dart';
+import 'package:auvnet_task/features/Home/domain/usecases/get_restaurant_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,7 +24,9 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: BlocProvider(
         create: (context) =>
-            HomeBloc(getIt<GetBannersUseCase>())..add(const GetBannersEvent()),
+            HomeBloc(getIt<GetBannersUseCase>(), getIt<GetRestaurantsUseCase>())
+              ..add(const GetBannersEvent())
+              ..add(const GetRestaurantsEvent()),
 
         child: ListView(
           children: [

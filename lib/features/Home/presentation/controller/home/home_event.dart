@@ -6,4 +6,5 @@ part 'home_event.freezed.dart';
 class HomeEvent with _$HomeEvent {
   const factory HomeEvent.getBanners() = GetBannersEvent;
   const factory HomeEvent.updateBannerIndex(int index) = UpdateBannerIndex;
+  const factory HomeEvent.getRestaurants() = GetRestaurantsEvent;
 }
