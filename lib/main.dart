@@ -8,10 +8,10 @@ import 'package:path_provider/path_provider.dart';
 
 import 'core/common/res/helpers/app_router.dart';
 import 'core/common/res/service/injection.dart';
-import 'features/Home/data/models/hive models/banner_hive_model.dart';
-import 'features/Home/data/models/hive models/restaurant_hive_model.dart';
-import 'features/Home/data/models/hive models/service_hive_model.dart';
-import 'features/Home/data/models/hive models/user_hive_model.dart';
+import 'features/Home/data/data sources/locale/hive models/banner_hive_model.dart';
+import 'features/Home/data/data sources/locale/hive models/restaurant_hive_model.dart';
+import 'features/Home/data/data sources/locale/hive models/service_hive_model.dart';
+import 'features/Home/data/data sources/locale/hive models/user_hive_model.dart';
 import 'features/getting started/presentation/controller/getting_started/getting_started_event.dart';
 
 void main() async {

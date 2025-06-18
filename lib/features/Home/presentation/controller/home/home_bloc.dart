@@ -2,10 +2,10 @@ import 'package:auvnet_task/features/Home/domain/usecases/get_restaurant_usecase
 import 'package:bloc/bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
-import '../../../data/models/hive models/banner_hive_model.dart';
-import '../../../data/models/hive models/restaurant_hive_model.dart';
-import '../../../data/models/hive models/service_hive_model.dart';
-import '../../../data/models/hive models/user_hive_model.dart';
+import '../../../data/data sources/locale/hive models/banner_hive_model.dart';
+import '../../../data/data sources/locale/hive models/restaurant_hive_model.dart';
+import '../../../data/data sources/locale/hive models/service_hive_model.dart';
+import '../../../data/data sources/locale/hive models/user_hive_model.dart';
 import '../../../domain/entities/banner_entity.dart';
 import '../../../domain/entities/restaurant_entity.dart';
 import '../../../domain/entities/service_entity.dart';

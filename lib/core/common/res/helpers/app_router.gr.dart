@@ -39,7 +39,7 @@ abstract class _$AppRouter extends RootStackRouter {
     SignUpRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: SignUpScreen(),
+        child: const SignUpScreen(),
       );
     },
     SplashRoute.name: (routeData) {

@@ -1,6 +1,3 @@
-// import 'package:flutter_bloc/flutter_bloc.dart';
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 
 import 'getting_started_event.dart';
@@ -21,7 +18,7 @@ class GettingStartedBloc
     emit(const GettingStartedState(index: -1));
 
     await Future.delayed(const Duration(seconds: 3));
-    log('proceeding to show logo');
+
     add(const GettingStartedEvent.logoShown());
   }
 

@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive/hive.dart';
 import '../../../../core/common/res/helpers/app_router.dart';
 import '../../../../core/common/res/utils/colors.dart';
-import '../../../Home/data/models/hive models/user_hive_model.dart';
+import '../../../Home/data/data sources/locale/hive models/user_hive_model.dart';
 import '../controller/getting_started/getting_started_bloc.dart';
 import '../controller/getting_started/getting_started_state.dart';
 import 'onboarding_screen.dart';

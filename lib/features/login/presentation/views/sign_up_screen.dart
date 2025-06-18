@@ -35,6 +35,9 @@ class SignUpScreen extends StatelessWidget {
 
               if (state is AuthSuccess) {
                 context.router.replace(const HomeRoute());
+                // context.router.replaceAll(
+                //   const HomeRoute() as List<PageRouteInfo>,
+                // );
               }
             },
             child: BlocBuilder<AuthBloc, AuthState>(

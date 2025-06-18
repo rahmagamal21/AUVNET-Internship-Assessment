@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:auvnet_task/core/common/res/utils/colors.dart';
 import 'package:auvnet_task/features/Home/presentation/controller/home/home_bloc.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -18,7 +16,6 @@ class BannerSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {
-        log('📦 Banners from state: ${state.banners}');
         if (state.isBannersLoading) {
           return const Center(child: CircularProgressIndicator());
         } else if (state.error != null) {
@@ -44,7 +41,6 @@ class BannerSlider extends StatelessWidget {
               ),
 
               items: state.banners.map((BannerEntity banner) {
-                log('🖼️ Banner URL: ${banner.imageUrl}');
                 final image = ClipRRect(
                   borderRadius: BorderRadius.circular(16.r),
                   child: Image.network(
