@@ -19,7 +19,7 @@ class BannerSlider extends StatelessWidget {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {
         log('📦 Banners from state: ${state.banners}');
-        if (state.isLoading) {
+        if (state.isBannersLoading) {
           return const Center(child: CircularProgressIndicator());
         } else if (state.error != null) {
           return Text('Error: ${state.error}');

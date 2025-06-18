@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/common/res/service/injection.dart';
 import '../../domain/usecases/get_banner_usecase.dart';
+import '../../domain/usecases/get_service_usecase.dart';
 import '../controller/home/home_bloc.dart';
 import '../controller/home/home_event.dart';
 import 'widgets/banner_slider.dart';
@@ -24,16 +25,21 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: BlocProvider(
         create: (context) =>
-            HomeBloc(getIt<GetBannersUseCase>(), getIt<GetRestaurantsUseCase>())
+            HomeBloc(
+                getIt<GetBannersUseCase>(),
+                getIt<GetRestaurantsUseCase>(),
+                getIt<GetServicesUseCase>(),
+              )
               ..add(const GetBannersEvent())
-              ..add(const GetRestaurantsEvent()),
+              ..add(const GetRestaurantsEvent())
+              ..add(const GetServicesEvent()),
 
         child: ListView(
           children: [
             const Header(),
             SizedBox(height: 10.h),
             const Services(),
-            SizedBox(height: 16.h),
+            SizedBox(height: 8.h),
             const CodeCard(),
             SizedBox(height: 16.h),
             const ShortCuts(),

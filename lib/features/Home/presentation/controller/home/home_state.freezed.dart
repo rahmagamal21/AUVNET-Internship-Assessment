@@ -18,10 +18,13 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HomeState {
   List<BannerEntity> get banners => throw _privateConstructorUsedError;
-  bool get isLoading => throw _privateConstructorUsedError;
-  String? get error => throw _privateConstructorUsedError;
-  int get currentBannerIndex => throw _privateConstructorUsedError;
   List<RestaurantEntity> get restaurants => throw _privateConstructorUsedError;
+  List<ServiceEntity> get services => throw _privateConstructorUsedError;
+  int get currentBannerIndex => throw _privateConstructorUsedError;
+  String? get error => throw _privateConstructorUsedError;
+  bool get isBannersLoading => throw _privateConstructorUsedError;
+  bool get isRestaurantsLoading => throw _privateConstructorUsedError;
+  bool get isServicesLoading => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -37,10 +40,13 @@ abstract class $HomeStateCopyWith<$Res> {
   @useResult
   $Res call({
     List<BannerEntity> banners,
-    bool isLoading,
-    String? error,
-    int currentBannerIndex,
     List<RestaurantEntity> restaurants,
+    List<ServiceEntity> services,
+    int currentBannerIndex,
+    String? error,
+    bool isBannersLoading,
+    bool isRestaurantsLoading,
+    bool isServicesLoading,
   });
 }
 
@@ -60,10 +66,13 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @override
   $Res call({
     Object? banners = null,
-    Object? isLoading = null,
-    Object? error = freezed,
-    Object? currentBannerIndex = null,
     Object? restaurants = null,
+    Object? services = null,
+    Object? currentBannerIndex = null,
+    Object? error = freezed,
+    Object? isBannersLoading = null,
+    Object? isRestaurantsLoading = null,
+    Object? isServicesLoading = null,
   }) {
     return _then(
       _value.copyWith(
@@ -71,22 +80,34 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
                 ? _value.banners
                 : banners // ignore: cast_nullable_to_non_nullable
                       as List<BannerEntity>,
-            isLoading: null == isLoading
-                ? _value.isLoading
-                : isLoading // ignore: cast_nullable_to_non_nullable
-                      as bool,
-            error: freezed == error
-                ? _value.error
-                : error // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            currentBannerIndex: null == currentBannerIndex
-                ? _value.currentBannerIndex
-                : currentBannerIndex // ignore: cast_nullable_to_non_nullable
-                      as int,
             restaurants: null == restaurants
                 ? _value.restaurants
                 : restaurants // ignore: cast_nullable_to_non_nullable
                       as List<RestaurantEntity>,
+            services: null == services
+                ? _value.services
+                : services // ignore: cast_nullable_to_non_nullable
+                      as List<ServiceEntity>,
+            currentBannerIndex: null == currentBannerIndex
+                ? _value.currentBannerIndex
+                : currentBannerIndex // ignore: cast_nullable_to_non_nullable
+                      as int,
+            error: freezed == error
+                ? _value.error
+                : error // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            isBannersLoading: null == isBannersLoading
+                ? _value.isBannersLoading
+                : isBannersLoading // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isRestaurantsLoading: null == isRestaurantsLoading
+                ? _value.isRestaurantsLoading
+                : isRestaurantsLoading // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isServicesLoading: null == isServicesLoading
+                ? _value.isServicesLoading
+                : isServicesLoading // ignore: cast_nullable_to_non_nullable
+                      as bool,
           )
           as $Val,
     );
@@ -104,10 +125,13 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   @useResult
   $Res call({
     List<BannerEntity> banners,
-    bool isLoading,
-    String? error,
-    int currentBannerIndex,
     List<RestaurantEntity> restaurants,
+    List<ServiceEntity> services,
+    int currentBannerIndex,
+    String? error,
+    bool isBannersLoading,
+    bool isRestaurantsLoading,
+    bool isServicesLoading,
   });
 }
 
@@ -126,10 +150,13 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? banners = null,
-    Object? isLoading = null,
-    Object? error = freezed,
-    Object? currentBannerIndex = null,
     Object? restaurants = null,
+    Object? services = null,
+    Object? currentBannerIndex = null,
+    Object? error = freezed,
+    Object? isBannersLoading = null,
+    Object? isRestaurantsLoading = null,
+    Object? isServicesLoading = null,
   }) {
     return _then(
       _$HomeStateImpl(
@@ -137,22 +164,34 @@ class __$$HomeStateImplCopyWithImpl<$Res>
             ? _value._banners
             : banners // ignore: cast_nullable_to_non_nullable
                   as List<BannerEntity>,
-        isLoading: null == isLoading
-            ? _value.isLoading
-            : isLoading // ignore: cast_nullable_to_non_nullable
-                  as bool,
-        error: freezed == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        currentBannerIndex: null == currentBannerIndex
-            ? _value.currentBannerIndex
-            : currentBannerIndex // ignore: cast_nullable_to_non_nullable
-                  as int,
         restaurants: null == restaurants
             ? _value._restaurants
             : restaurants // ignore: cast_nullable_to_non_nullable
                   as List<RestaurantEntity>,
+        services: null == services
+            ? _value._services
+            : services // ignore: cast_nullable_to_non_nullable
+                  as List<ServiceEntity>,
+        currentBannerIndex: null == currentBannerIndex
+            ? _value.currentBannerIndex
+            : currentBannerIndex // ignore: cast_nullable_to_non_nullable
+                  as int,
+        error: freezed == error
+            ? _value.error
+            : error // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        isBannersLoading: null == isBannersLoading
+            ? _value.isBannersLoading
+            : isBannersLoading // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isRestaurantsLoading: null == isRestaurantsLoading
+            ? _value.isRestaurantsLoading
+            : isRestaurantsLoading // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isServicesLoading: null == isServicesLoading
+            ? _value.isServicesLoading
+            : isServicesLoading // ignore: cast_nullable_to_non_nullable
+                  as bool,
       ),
     );
   }
@@ -162,39 +201,63 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 
 class _$HomeStateImpl implements _HomeState {
   const _$HomeStateImpl({
-    required final List<BannerEntity> banners,
-    required this.isLoading,
+    final List<BannerEntity> banners = const [],
+    final List<RestaurantEntity> restaurants = const [],
+    final List<ServiceEntity> services = const [],
+    this.currentBannerIndex = 0,
     this.error,
-    required this.currentBannerIndex,
-    required final List<RestaurantEntity> restaurants,
+    this.isBannersLoading = false,
+    this.isRestaurantsLoading = false,
+    this.isServicesLoading = false,
   }) : _banners = banners,
-       _restaurants = restaurants;
+       _restaurants = restaurants,
+       _services = services;
 
   final List<BannerEntity> _banners;
   @override
+  @JsonKey()
   List<BannerEntity> get banners {
     if (_banners is EqualUnmodifiableListView) return _banners;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_banners);
   }
 
-  @override
-  final bool isLoading;
-  @override
-  final String? error;
-  @override
-  final int currentBannerIndex;
   final List<RestaurantEntity> _restaurants;
   @override
+  @JsonKey()
   List<RestaurantEntity> get restaurants {
     if (_restaurants is EqualUnmodifiableListView) return _restaurants;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_restaurants);
   }
 
+  final List<ServiceEntity> _services;
+  @override
+  @JsonKey()
+  List<ServiceEntity> get services {
+    if (_services is EqualUnmodifiableListView) return _services;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_services);
+  }
+
+  @override
+  @JsonKey()
+  final int currentBannerIndex;
+  @override
+  final String? error;
+  @override
+  @JsonKey()
+  final bool isBannersLoading;
+  @override
+  @JsonKey()
+  final bool isRestaurantsLoading;
+  @override
+  @JsonKey()
+  final bool isServicesLoading;
+
   @override
   String toString() {
-    return 'HomeState(banners: $banners, isLoading: $isLoading, error: $error, currentBannerIndex: $currentBannerIndex, restaurants: $restaurants)';
+    return 'HomeState(banners: $banners, restaurants: $restaurants, services: $services, currentBannerIndex: $currentBannerIndex, error: $error, isBannersLoading: $isBannersLoading, isRestaurantsLoading: $isRestaurantsLoading, isServicesLoading: $isServicesLoading)';
   }
 
   @override
@@ -203,25 +266,33 @@ class _$HomeStateImpl implements _HomeState {
         (other.runtimeType == runtimeType &&
             other is _$HomeStateImpl &&
             const DeepCollectionEquality().equals(other._banners, _banners) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
-            (identical(other.error, error) || other.error == error) &&
-            (identical(other.currentBannerIndex, currentBannerIndex) ||
-                other.currentBannerIndex == currentBannerIndex) &&
             const DeepCollectionEquality().equals(
               other._restaurants,
               _restaurants,
-            ));
+            ) &&
+            const DeepCollectionEquality().equals(other._services, _services) &&
+            (identical(other.currentBannerIndex, currentBannerIndex) ||
+                other.currentBannerIndex == currentBannerIndex) &&
+            (identical(other.error, error) || other.error == error) &&
+            (identical(other.isBannersLoading, isBannersLoading) ||
+                other.isBannersLoading == isBannersLoading) &&
+            (identical(other.isRestaurantsLoading, isRestaurantsLoading) ||
+                other.isRestaurantsLoading == isRestaurantsLoading) &&
+            (identical(other.isServicesLoading, isServicesLoading) ||
+                other.isServicesLoading == isServicesLoading));
   }
 
   @override
   int get hashCode => Object.hash(
     runtimeType,
     const DeepCollectionEquality().hash(_banners),
-    isLoading,
-    error,
-    currentBannerIndex,
     const DeepCollectionEquality().hash(_restaurants),
+    const DeepCollectionEquality().hash(_services),
+    currentBannerIndex,
+    error,
+    isBannersLoading,
+    isRestaurantsLoading,
+    isServicesLoading,
   );
 
   /// Create a copy of HomeState
@@ -235,23 +306,32 @@ class _$HomeStateImpl implements _HomeState {
 
 abstract class _HomeState implements HomeState {
   const factory _HomeState({
-    required final List<BannerEntity> banners,
-    required final bool isLoading,
+    final List<BannerEntity> banners,
+    final List<RestaurantEntity> restaurants,
+    final List<ServiceEntity> services,
+    final int currentBannerIndex,
     final String? error,
-    required final int currentBannerIndex,
-    required final List<RestaurantEntity> restaurants,
+    final bool isBannersLoading,
+    final bool isRestaurantsLoading,
+    final bool isServicesLoading,
   }) = _$HomeStateImpl;
 
   @override
   List<BannerEntity> get banners;
   @override
-  bool get isLoading;
+  List<RestaurantEntity> get restaurants;
   @override
-  String? get error;
+  List<ServiceEntity> get services;
   @override
   int get currentBannerIndex;
   @override
-  List<RestaurantEntity> get restaurants;
+  String? get error;
+  @override
+  bool get isBannersLoading;
+  @override
+  bool get isRestaurantsLoading;
+  @override
+  bool get isServicesLoading;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

@@ -18,6 +18,8 @@ class Restaurants extends StatelessWidget {
 
         if (restaurants.isEmpty) {
           return const SizedBox.shrink();
+        } else if (state.isRestaurantsLoading) {
+          return const Center(child: CircularProgressIndicator());
         }
 
         return Column(

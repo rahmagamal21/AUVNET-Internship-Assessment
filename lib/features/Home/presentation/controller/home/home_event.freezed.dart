@@ -22,18 +22,21 @@ mixin _$HomeEvent {
     required TResult Function() getBanners,
     required TResult Function(int index) updateBannerIndex,
     required TResult Function() getRestaurants,
+    required TResult Function() getServices,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getBanners,
     TResult? Function(int index)? updateBannerIndex,
     TResult? Function()? getRestaurants,
+    TResult? Function()? getServices,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getBanners,
     TResult Function(int index)? updateBannerIndex,
     TResult Function()? getRestaurants,
+    TResult Function()? getServices,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,18 +44,21 @@ mixin _$HomeEvent {
     required TResult Function(GetBannersEvent value) getBanners,
     required TResult Function(UpdateBannerIndex value) updateBannerIndex,
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
+    required TResult Function(GetServicesEvent value) getServices,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GetBannersEvent value)? getBanners,
     TResult? Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult? Function(GetServicesEvent value)? getServices,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GetBannersEvent value)? getBanners,
     TResult Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult Function(GetServicesEvent value)? getServices,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
 }
@@ -123,6 +129,7 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     required TResult Function() getBanners,
     required TResult Function(int index) updateBannerIndex,
     required TResult Function() getRestaurants,
+    required TResult Function() getServices,
   }) {
     return getBanners();
   }
@@ -133,6 +140,7 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult? Function()? getBanners,
     TResult? Function(int index)? updateBannerIndex,
     TResult? Function()? getRestaurants,
+    TResult? Function()? getServices,
   }) {
     return getBanners?.call();
   }
@@ -143,6 +151,7 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult Function()? getBanners,
     TResult Function(int index)? updateBannerIndex,
     TResult Function()? getRestaurants,
+    TResult Function()? getServices,
     required TResult orElse(),
   }) {
     if (getBanners != null) {
@@ -157,6 +166,7 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     required TResult Function(GetBannersEvent value) getBanners,
     required TResult Function(UpdateBannerIndex value) updateBannerIndex,
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
+    required TResult Function(GetServicesEvent value) getServices,
   }) {
     return getBanners(this);
   }
@@ -167,6 +177,7 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult? Function(GetBannersEvent value)? getBanners,
     TResult? Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult? Function(GetServicesEvent value)? getServices,
   }) {
     return getBanners?.call(this);
   }
@@ -177,6 +188,7 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult Function(GetBannersEvent value)? getBanners,
     TResult Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult Function(GetServicesEvent value)? getServices,
     required TResult orElse(),
   }) {
     if (getBanners != null) {
@@ -266,6 +278,7 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     required TResult Function() getBanners,
     required TResult Function(int index) updateBannerIndex,
     required TResult Function() getRestaurants,
+    required TResult Function() getServices,
   }) {
     return updateBannerIndex(index);
   }
@@ -276,6 +289,7 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult? Function()? getBanners,
     TResult? Function(int index)? updateBannerIndex,
     TResult? Function()? getRestaurants,
+    TResult? Function()? getServices,
   }) {
     return updateBannerIndex?.call(index);
   }
@@ -286,6 +300,7 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult Function()? getBanners,
     TResult Function(int index)? updateBannerIndex,
     TResult Function()? getRestaurants,
+    TResult Function()? getServices,
     required TResult orElse(),
   }) {
     if (updateBannerIndex != null) {
@@ -300,6 +315,7 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     required TResult Function(GetBannersEvent value) getBanners,
     required TResult Function(UpdateBannerIndex value) updateBannerIndex,
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
+    required TResult Function(GetServicesEvent value) getServices,
   }) {
     return updateBannerIndex(this);
   }
@@ -310,6 +326,7 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult? Function(GetBannersEvent value)? getBanners,
     TResult? Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult? Function(GetServicesEvent value)? getServices,
   }) {
     return updateBannerIndex?.call(this);
   }
@@ -320,6 +337,7 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult Function(GetBannersEvent value)? getBanners,
     TResult Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult Function(GetServicesEvent value)? getServices,
     required TResult orElse(),
   }) {
     if (updateBannerIndex != null) {
@@ -388,6 +406,7 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     required TResult Function() getBanners,
     required TResult Function(int index) updateBannerIndex,
     required TResult Function() getRestaurants,
+    required TResult Function() getServices,
   }) {
     return getRestaurants();
   }
@@ -398,6 +417,7 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult? Function()? getBanners,
     TResult? Function(int index)? updateBannerIndex,
     TResult? Function()? getRestaurants,
+    TResult? Function()? getServices,
   }) {
     return getRestaurants?.call();
   }
@@ -408,6 +428,7 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult Function()? getBanners,
     TResult Function(int index)? updateBannerIndex,
     TResult Function()? getRestaurants,
+    TResult Function()? getServices,
     required TResult orElse(),
   }) {
     if (getRestaurants != null) {
@@ -422,6 +443,7 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     required TResult Function(GetBannersEvent value) getBanners,
     required TResult Function(UpdateBannerIndex value) updateBannerIndex,
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
+    required TResult Function(GetServicesEvent value) getServices,
   }) {
     return getRestaurants(this);
   }
@@ -432,6 +454,7 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult? Function(GetBannersEvent value)? getBanners,
     TResult? Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult? Function(GetServicesEvent value)? getServices,
   }) {
     return getRestaurants?.call(this);
   }
@@ -442,6 +465,7 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult Function(GetBannersEvent value)? getBanners,
     TResult Function(UpdateBannerIndex value)? updateBannerIndex,
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult Function(GetServicesEvent value)? getServices,
     required TResult orElse(),
   }) {
     if (getRestaurants != null) {
@@ -453,4 +477,123 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
 
 abstract class GetRestaurantsEvent implements HomeEvent {
   const factory GetRestaurantsEvent() = _$GetRestaurantsEventImpl;
+}
+
+/// @nodoc
+abstract class _$$GetServicesEventImplCopyWith<$Res> {
+  factory _$$GetServicesEventImplCopyWith(
+    _$GetServicesEventImpl value,
+    $Res Function(_$GetServicesEventImpl) then,
+  ) = __$$GetServicesEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetServicesEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetServicesEventImpl>
+    implements _$$GetServicesEventImplCopyWith<$Res> {
+  __$$GetServicesEventImplCopyWithImpl(
+    _$GetServicesEventImpl _value,
+    $Res Function(_$GetServicesEventImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetServicesEventImpl implements GetServicesEvent {
+  const _$GetServicesEventImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getServices()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetServicesEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getBanners,
+    required TResult Function(int index) updateBannerIndex,
+    required TResult Function() getRestaurants,
+    required TResult Function() getServices,
+  }) {
+    return getServices();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getBanners,
+    TResult? Function(int index)? updateBannerIndex,
+    TResult? Function()? getRestaurants,
+    TResult? Function()? getServices,
+  }) {
+    return getServices?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getBanners,
+    TResult Function(int index)? updateBannerIndex,
+    TResult Function()? getRestaurants,
+    TResult Function()? getServices,
+    required TResult orElse(),
+  }) {
+    if (getServices != null) {
+      return getServices();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetBannersEvent value) getBanners,
+    required TResult Function(UpdateBannerIndex value) updateBannerIndex,
+    required TResult Function(GetRestaurantsEvent value) getRestaurants,
+    required TResult Function(GetServicesEvent value) getServices,
+  }) {
+    return getServices(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetBannersEvent value)? getBanners,
+    TResult? Function(UpdateBannerIndex value)? updateBannerIndex,
+    TResult? Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult? Function(GetServicesEvent value)? getServices,
+  }) {
+    return getServices?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetBannersEvent value)? getBanners,
+    TResult Function(UpdateBannerIndex value)? updateBannerIndex,
+    TResult Function(GetRestaurantsEvent value)? getRestaurants,
+    TResult Function(GetServicesEvent value)? getServices,
+    required TResult orElse(),
+  }) {
+    if (getServices != null) {
+      return getServices(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetServicesEvent implements HomeEvent {
+  const factory GetServicesEvent() = _$GetServicesEventImpl;
 }

@@ -30,7 +30,7 @@ class ServiceItem extends StatelessWidget {
             ),
             height: 70.h,
             width: 105.w,
-            child: Image.asset(image, width: 57.w, height: 50.h),
+            child: Image.network(image, width: 57.w, height: 50.h),
           ),
           SizedBox(height: 4.h),
           Container(
@@ -50,6 +50,7 @@ class ServiceItem extends StatelessWidget {
           SizedBox(height: 4.h),
           Text(
             label,
+            //overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             style: Styles.dmSansMedium().copyWith(color: AppColors.black),
           ),

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'auth_event.dart';
@@ -53,10 +54,21 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
 
-      await _auth.createUserWithEmailAndPassword(
+      final credential = await _auth.createUserWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text,
       );
+
+      final user = credential.user;
+
+      if (user != null) {
+        await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+          'uid': user.uid,
+          'email': user.email,
+          'name': user.email!.split('@')[0],
+          'profileImage': '',
+        });
+      }
 
       emit(const AuthState.success());
     } on FirebaseAuthException catch (e) {
