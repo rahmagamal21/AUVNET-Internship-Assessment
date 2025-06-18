@@ -1,8 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:auvnet_task/core/common/res/utils/styles.dart';
-import 'package:auvnet_task/features/login/presentation/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/common/res/helpers/app_router.dart';
 import '../../../../core/common/res/utils/colors.dart';
 import '../controller/getting_started/getting_started_bloc.dart';
 import '../controller/getting_started/getting_started_event.dart';
@@ -10,6 +11,7 @@ import '../controller/getting_started/getting_started_state.dart';
 import 'widgets/on_boarding_image.dart';
 import 'widgets/start_button.dart';
 
+@RoutePage()
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});
 
@@ -66,12 +68,7 @@ class OnboardingScreen extends StatelessWidget {
                           context.read<GettingStartedBloc>().add(
                             const GettingStartedEvent.skipPressed(),
                           );
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LoginScreen(),
-                            ),
-                          );
+                          context.router.replace(const LoginRoute());
                         },
                       ),
                       SizedBox(height: 12.h),

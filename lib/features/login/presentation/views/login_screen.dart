@@ -1,18 +1,19 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:auvnet_task/core/common/res/utils/styles.dart';
-import 'package:auvnet_task/features/Home/presentation/views/home_screen.dart';
 import 'package:auvnet_task/features/getting%20started/presentation/views/widgets/start_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/common/res/helpers/app_router.dart';
 import '../../../../core/common/res/utils/colors.dart';
 import '../controller/auth/auth_bloc.dart';
 import '../controller/auth/auth_event.dart';
 import '../controller/auth/auth_state.dart';
-import 'sign_up_screen.dart';
 import 'widgets/custom_text_button.dart';
 import 'widgets/custom_textfield.dart';
 
+@RoutePage()
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -32,10 +33,7 @@ class LoginScreen extends StatelessWidget {
               }
 
               if (state is AuthSuccess) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const HomeScreen()),
-                );
+                context.router.replace(const HomeRoute());
               }
             },
             child: BlocBuilder<AuthBloc, AuthState>(
@@ -87,12 +85,7 @@ class LoginScreen extends StatelessWidget {
                         CustomTextButton(
                           text: 'Create an account',
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const SignUpScreen(),
-                              ),
-                            );
+                            context.router.push(const SignUpRoute());
                           },
                         ),
                       ],

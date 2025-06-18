@@ -23,7 +23,6 @@ mixin _$HomeEvent {
     required TResult Function() getRestaurants,
     required TResult Function() getServices,
     required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,7 +32,6 @@ mixin _$HomeEvent {
     TResult? Function()? getRestaurants,
     TResult? Function()? getServices,
     TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,7 +41,6 @@ mixin _$HomeEvent {
     TResult Function()? getRestaurants,
     TResult Function()? getServices,
     TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -54,8 +51,6 @@ mixin _$HomeEvent {
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
     required TResult Function(GetServicesEvent value) getServices,
     required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,7 +60,6 @@ mixin _$HomeEvent {
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
     TResult? Function(GetServicesEvent value)? getServices,
     TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,7 +69,6 @@ mixin _$HomeEvent {
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
     TResult Function(GetServicesEvent value)? getServices,
     TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,7 +140,6 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     required TResult Function() getRestaurants,
     required TResult Function() getServices,
     required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
   }) {
     return getBanners();
   }
@@ -160,7 +152,6 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult? Function()? getRestaurants,
     TResult? Function()? getServices,
     TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
   }) {
     return getBanners?.call();
   }
@@ -173,7 +164,6 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult Function()? getRestaurants,
     TResult Function()? getServices,
     TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getBanners != null) {
@@ -190,8 +180,6 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
     required TResult Function(GetServicesEvent value) getServices,
     required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
   }) {
     return getBanners(this);
   }
@@ -204,7 +192,6 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
     TResult? Function(GetServicesEvent value)? getServices,
     TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
   }) {
     return getBanners?.call(this);
   }
@@ -217,7 +204,6 @@ class _$GetBannersEventImpl implements GetBannersEvent {
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
     TResult Function(GetServicesEvent value)? getServices,
     TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getBanners != null) {
@@ -305,7 +291,6 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     required TResult Function() getRestaurants,
     required TResult Function() getServices,
     required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
   }) {
     return updateBannerIndex(index);
   }
@@ -318,7 +303,6 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult? Function()? getRestaurants,
     TResult? Function()? getServices,
     TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
   }) {
     return updateBannerIndex?.call(index);
   }
@@ -331,7 +315,6 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult Function()? getRestaurants,
     TResult Function()? getServices,
     TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (updateBannerIndex != null) {
@@ -348,8 +331,6 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
     required TResult Function(GetServicesEvent value) getServices,
     required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
   }) {
     return updateBannerIndex(this);
   }
@@ -362,7 +343,6 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
     TResult? Function(GetServicesEvent value)? getServices,
     TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
   }) {
     return updateBannerIndex?.call(this);
   }
@@ -375,7 +355,6 @@ class _$UpdateBannerIndexImpl implements UpdateBannerIndex {
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
     TResult Function(GetServicesEvent value)? getServices,
     TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (updateBannerIndex != null) {
@@ -444,7 +423,6 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     required TResult Function() getRestaurants,
     required TResult Function() getServices,
     required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
   }) {
     return getRestaurants();
   }
@@ -457,7 +435,6 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult? Function()? getRestaurants,
     TResult? Function()? getServices,
     TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
   }) {
     return getRestaurants?.call();
   }
@@ -470,7 +447,6 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult Function()? getRestaurants,
     TResult Function()? getServices,
     TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getRestaurants != null) {
@@ -487,8 +463,6 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
     required TResult Function(GetServicesEvent value) getServices,
     required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
   }) {
     return getRestaurants(this);
   }
@@ -501,7 +475,6 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
     TResult? Function(GetServicesEvent value)? getServices,
     TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
   }) {
     return getRestaurants?.call(this);
   }
@@ -514,7 +487,6 @@ class _$GetRestaurantsEventImpl implements GetRestaurantsEvent {
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
     TResult Function(GetServicesEvent value)? getServices,
     TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getRestaurants != null) {
@@ -574,7 +546,6 @@ class _$GetServicesEventImpl implements GetServicesEvent {
     required TResult Function() getRestaurants,
     required TResult Function() getServices,
     required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
   }) {
     return getServices();
   }
@@ -587,7 +558,6 @@ class _$GetServicesEventImpl implements GetServicesEvent {
     TResult? Function()? getRestaurants,
     TResult? Function()? getServices,
     TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
   }) {
     return getServices?.call();
   }
@@ -600,7 +570,6 @@ class _$GetServicesEventImpl implements GetServicesEvent {
     TResult Function()? getRestaurants,
     TResult Function()? getServices,
     TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getServices != null) {
@@ -617,8 +586,6 @@ class _$GetServicesEventImpl implements GetServicesEvent {
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
     required TResult Function(GetServicesEvent value) getServices,
     required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
   }) {
     return getServices(this);
   }
@@ -631,7 +598,6 @@ class _$GetServicesEventImpl implements GetServicesEvent {
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
     TResult? Function(GetServicesEvent value)? getServices,
     TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
   }) {
     return getServices?.call(this);
   }
@@ -644,7 +610,6 @@ class _$GetServicesEventImpl implements GetServicesEvent {
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
     TResult Function(GetServicesEvent value)? getServices,
     TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getServices != null) {
@@ -705,7 +670,6 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
     required TResult Function() getRestaurants,
     required TResult Function() getServices,
     required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
   }) {
     return getCurrentUserEvent();
   }
@@ -718,7 +682,6 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
     TResult? Function()? getRestaurants,
     TResult? Function()? getServices,
     TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
   }) {
     return getCurrentUserEvent?.call();
   }
@@ -731,7 +694,6 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
     TResult Function()? getRestaurants,
     TResult Function()? getServices,
     TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getCurrentUserEvent != null) {
@@ -748,8 +710,6 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
     required TResult Function(GetRestaurantsEvent value) getRestaurants,
     required TResult Function(GetServicesEvent value) getServices,
     required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
   }) {
     return getCurrentUserEvent(this);
   }
@@ -762,7 +722,6 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
     TResult? Function(GetRestaurantsEvent value)? getRestaurants,
     TResult? Function(GetServicesEvent value)? getServices,
     TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
   }) {
     return getCurrentUserEvent?.call(this);
   }
@@ -775,7 +734,6 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
     TResult Function(GetRestaurantsEvent value)? getRestaurants,
     TResult Function(GetServicesEvent value)? getServices,
     TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
     required TResult orElse(),
   }) {
     if (getCurrentUserEvent != null) {
@@ -787,136 +745,4 @@ class _$GetCurrentUserEventImpl implements GetCurrentUserEvent {
 
 abstract class GetCurrentUserEvent implements HomeEvent {
   const factory GetCurrentUserEvent() = _$GetCurrentUserEventImpl;
-}
-
-/// @nodoc
-abstract class _$$GetUserFromCacheEventImplCopyWith<$Res> {
-  factory _$$GetUserFromCacheEventImplCopyWith(
-          _$GetUserFromCacheEventImpl value,
-          $Res Function(_$GetUserFromCacheEventImpl) then) =
-      __$$GetUserFromCacheEventImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$GetUserFromCacheEventImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$GetUserFromCacheEventImpl>
-    implements _$$GetUserFromCacheEventImplCopyWith<$Res> {
-  __$$GetUserFromCacheEventImplCopyWithImpl(_$GetUserFromCacheEventImpl _value,
-      $Res Function(_$GetUserFromCacheEventImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$GetUserFromCacheEventImpl implements GetUserFromCacheEvent {
-  const _$GetUserFromCacheEventImpl();
-
-  @override
-  String toString() {
-    return 'HomeEvent.getUserFromCacheEvent()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetUserFromCacheEventImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() getBanners,
-    required TResult Function(int index) updateBannerIndex,
-    required TResult Function() getRestaurants,
-    required TResult Function() getServices,
-    required TResult Function() getCurrentUserEvent,
-    required TResult Function() getUserFromCacheEvent,
-  }) {
-    return getUserFromCacheEvent();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getBanners,
-    TResult? Function(int index)? updateBannerIndex,
-    TResult? Function()? getRestaurants,
-    TResult? Function()? getServices,
-    TResult? Function()? getCurrentUserEvent,
-    TResult? Function()? getUserFromCacheEvent,
-  }) {
-    return getUserFromCacheEvent?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getBanners,
-    TResult Function(int index)? updateBannerIndex,
-    TResult Function()? getRestaurants,
-    TResult Function()? getServices,
-    TResult Function()? getCurrentUserEvent,
-    TResult Function()? getUserFromCacheEvent,
-    required TResult orElse(),
-  }) {
-    if (getUserFromCacheEvent != null) {
-      return getUserFromCacheEvent();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(GetBannersEvent value) getBanners,
-    required TResult Function(UpdateBannerIndex value) updateBannerIndex,
-    required TResult Function(GetRestaurantsEvent value) getRestaurants,
-    required TResult Function(GetServicesEvent value) getServices,
-    required TResult Function(GetCurrentUserEvent value) getCurrentUserEvent,
-    required TResult Function(GetUserFromCacheEvent value)
-        getUserFromCacheEvent,
-  }) {
-    return getUserFromCacheEvent(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(GetBannersEvent value)? getBanners,
-    TResult? Function(UpdateBannerIndex value)? updateBannerIndex,
-    TResult? Function(GetRestaurantsEvent value)? getRestaurants,
-    TResult? Function(GetServicesEvent value)? getServices,
-    TResult? Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult? Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
-  }) {
-    return getUserFromCacheEvent?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(GetBannersEvent value)? getBanners,
-    TResult Function(UpdateBannerIndex value)? updateBannerIndex,
-    TResult Function(GetRestaurantsEvent value)? getRestaurants,
-    TResult Function(GetServicesEvent value)? getServices,
-    TResult Function(GetCurrentUserEvent value)? getCurrentUserEvent,
-    TResult Function(GetUserFromCacheEvent value)? getUserFromCacheEvent,
-    required TResult orElse(),
-  }) {
-    if (getUserFromCacheEvent != null) {
-      return getUserFromCacheEvent(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class GetUserFromCacheEvent implements HomeEvent {
-  const factory GetUserFromCacheEvent() = _$GetUserFromCacheEventImpl;
 }

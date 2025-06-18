@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:auvnet_task/core/common/res/utils/colors.dart';
 import 'package:auvnet_task/features/Home/domain/usecases/get_restaurant_usecase.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ import 'widgets/restaurants.dart';
 import 'widgets/services.dart';
 import 'widgets/shortcuts.dart';
 
+@RoutePage()
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -42,7 +44,7 @@ class HomeScreen extends StatelessWidget {
             const Header(),
             SizedBox(height: 10.h),
             const Services(),
-            SizedBox(height: 8.h),
+            SizedBox(height: 5.h),
             const CodeCard(),
             SizedBox(height: 16.h),
             const ShortCuts(),

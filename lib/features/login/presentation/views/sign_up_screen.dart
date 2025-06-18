@@ -1,18 +1,19 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:auvnet_task/core/common/res/utils/styles.dart';
 import 'package:auvnet_task/features/getting%20started/presentation/views/widgets/start_button.dart';
-import 'package:auvnet_task/features/login/presentation/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/common/res/helpers/app_router.dart';
 import '../../../../core/common/res/utils/colors.dart';
-import '../../../Home/presentation/views/home_screen.dart';
 import '../controller/auth/auth_bloc.dart';
 import '../controller/auth/auth_event.dart';
 import '../controller/auth/auth_state.dart';
 import 'widgets/custom_text_button.dart';
 import 'widgets/custom_textfield.dart';
 
+@RoutePage()
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -33,10 +34,7 @@ class SignUpScreen extends StatelessWidget {
               }
 
               if (state is AuthSuccess) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const HomeScreen()),
-                );
+                context.router.replace(const HomeRoute());
               }
             },
             child: BlocBuilder<AuthBloc, AuthState>(
@@ -126,12 +124,7 @@ class SignUpScreen extends StatelessWidget {
                         CustomTextButton(
                           text: 'Login',
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const LoginScreen(),
-                              ),
-                            );
+                            context.router.push(const LoginRoute());
                           },
                         ),
                       ],
