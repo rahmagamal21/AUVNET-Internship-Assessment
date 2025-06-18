@@ -1,4 +1,3 @@
-// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -50,64 +49,52 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
-  // initializes the registration of main-scope dependencies inside of GetIt
+// initializes the registration of main-scope dependencies inside of GetIt
   _i174.GetIt init({
     String? environment,
     _i526.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    final gh = _i526.GetItHelper(
+      this,
+      environment,
+      environmentFilter,
+    );
     final firebaseModule = _$FirebaseModule();
     gh.lazySingleton<_i974.FirebaseFirestore>(() => firebaseModule.firestore);
     gh.lazySingleton<_i59.FirebaseAuth>(() => firebaseModule.firebaseAuth);
     gh.lazySingleton<_i86.BannerRemoteDataSource>(
-      () => _i86.BannerRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()),
-    );
+        () => _i86.BannerRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()));
     gh.lazySingleton<_i775.ServiceRemoteDataSource>(
-      () => _i775.ServiceRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()),
-    );
-    gh.lazySingleton<_i640.RestaurantRemoteDataSource>(
-      () => _i640.RestaurantRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()),
-    );
-    gh.lazySingleton<_i190.RestaurantRepository>(
-      () => _i475.RestaurantRepositoryImpl(
-        gh<_i640.RestaurantRemoteDataSource>(),
-      ),
-    );
+        () => _i775.ServiceRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()));
+    gh.lazySingleton<_i640.RestaurantRemoteDataSource>(() =>
+        _i640.RestaurantRemoteDataSourceImpl(gh<_i974.FirebaseFirestore>()));
+    gh.lazySingleton<_i190.RestaurantRepository>(() =>
+        _i475.RestaurantRepositoryImpl(gh<_i640.RestaurantRemoteDataSource>()));
     gh.lazySingleton<_i792.UserRemoteDataSource>(
-      () => _i792.UserRemoteDataSourceImpl(
-        gh<_i59.FirebaseAuth>(),
-        gh<_i974.FirebaseFirestore>(),
-      ),
-    );
+        () => _i792.UserRemoteDataSourceImpl(
+              gh<_i59.FirebaseAuth>(),
+              gh<_i974.FirebaseFirestore>(),
+            ));
     gh.lazySingleton<_i681.BannerRepository>(
-      () => _i1035.BannerRepositoryImpl(gh<_i86.BannerRemoteDataSource>()),
-    );
+        () => _i1035.BannerRepositoryImpl(gh<_i86.BannerRemoteDataSource>()));
     gh.lazySingleton<_i57.ServiceRepository>(
-      () => _i434.ServiceRepositoryImpl(gh<_i775.ServiceRemoteDataSource>()),
-    );
+        () => _i434.ServiceRepositoryImpl(gh<_i775.ServiceRemoteDataSource>()));
     gh.factory<_i653.GetBannersUseCase>(
-      () => _i653.GetBannersUseCase(gh<_i681.BannerRepository>()),
-    );
+        () => _i653.GetBannersUseCase(gh<_i681.BannerRepository>()));
     gh.factory<_i321.GetRestaurantsUseCase>(
-      () => _i321.GetRestaurantsUseCase(gh<_i190.RestaurantRepository>()),
-    );
+        () => _i321.GetRestaurantsUseCase(gh<_i190.RestaurantRepository>()));
     gh.factory<_i873.GetServicesUseCase>(
-      () => _i873.GetServicesUseCase(gh<_i57.ServiceRepository>()),
-    );
+        () => _i873.GetServicesUseCase(gh<_i57.ServiceRepository>()));
     gh.lazySingleton<_i1056.UserRepository>(
-      () => _i245.UserRepositoryImpl(gh<_i792.UserRemoteDataSource>()),
-    );
+        () => _i245.UserRepositoryImpl(gh<_i792.UserRemoteDataSource>()));
     gh.factory<_i1052.GetUserUseCase>(
-      () => _i1052.GetUserUseCase(gh<_i1056.UserRepository>()),
-    );
-    gh.factory<_i339.HomeBloc>(
-      () => _i339.HomeBloc(
-        gh<_i653.GetBannersUseCase>(),
-        gh<_i321.GetRestaurantsUseCase>(),
-        gh<_i873.GetServicesUseCase>(),
-        gh<_i1052.GetUserUseCase>(),
-      ),
-    );
+        () => _i1052.GetUserUseCase(gh<_i1056.UserRepository>()));
+    gh.factory<_i339.HomeBloc>(() => _i339.HomeBloc(
+          gh<_i653.GetBannersUseCase>(),
+          gh<_i321.GetRestaurantsUseCase>(),
+          gh<_i873.GetServicesUseCase>(),
+          gh<_i1052.GetUserUseCase>(),
+        ));
     return this;
   }
 }

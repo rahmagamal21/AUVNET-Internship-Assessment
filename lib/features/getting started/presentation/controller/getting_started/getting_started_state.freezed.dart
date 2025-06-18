@@ -12,8 +12,7 @@ part of 'getting_started_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$GettingStartedState {
@@ -29,9 +28,8 @@ mixin _$GettingStartedState {
 /// @nodoc
 abstract class $GettingStartedStateCopyWith<$Res> {
   factory $GettingStartedStateCopyWith(
-    GettingStartedState value,
-    $Res Function(GettingStartedState) then,
-  ) = _$GettingStartedStateCopyWithImpl<$Res, GettingStartedState>;
+          GettingStartedState value, $Res Function(GettingStartedState) then) =
+      _$GettingStartedStateCopyWithImpl<$Res, GettingStartedState>;
   @useResult
   $Res call({int index});
 }
@@ -50,26 +48,24 @@ class _$GettingStartedStateCopyWithImpl<$Res, $Val extends GettingStartedState>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? index = null}) {
-    return _then(
-      _value.copyWith(
-            index: null == index
-                ? _value.index
-                : index // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_value.copyWith(
+      index: null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$GettingStartedStateImplCopyWith<$Res>
     implements $GettingStartedStateCopyWith<$Res> {
-  factory _$$GettingStartedStateImplCopyWith(
-    _$GettingStartedStateImpl value,
-    $Res Function(_$GettingStartedStateImpl) then,
-  ) = __$$GettingStartedStateImplCopyWithImpl<$Res>;
+  factory _$$GettingStartedStateImplCopyWith(_$GettingStartedStateImpl value,
+          $Res Function(_$GettingStartedStateImpl) then) =
+      __$$GettingStartedStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int index});
@@ -79,24 +75,23 @@ abstract class _$$GettingStartedStateImplCopyWith<$Res>
 class __$$GettingStartedStateImplCopyWithImpl<$Res>
     extends _$GettingStartedStateCopyWithImpl<$Res, _$GettingStartedStateImpl>
     implements _$$GettingStartedStateImplCopyWith<$Res> {
-  __$$GettingStartedStateImplCopyWithImpl(
-    _$GettingStartedStateImpl _value,
-    $Res Function(_$GettingStartedStateImpl) _then,
-  ) : super(_value, _then);
+  __$$GettingStartedStateImplCopyWithImpl(_$GettingStartedStateImpl _value,
+      $Res Function(_$GettingStartedStateImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GettingStartedState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? index = null}) {
-    return _then(
-      _$GettingStartedStateImpl(
-        index: null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$GettingStartedStateImpl(
+      index: null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -131,9 +126,7 @@ class _$GettingStartedStateImpl implements _GettingStartedState {
   @pragma('vm:prefer-inline')
   _$$GettingStartedStateImplCopyWith<_$GettingStartedStateImpl> get copyWith =>
       __$$GettingStartedStateImplCopyWithImpl<_$GettingStartedStateImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 }
 
 abstract class _GettingStartedState implements GettingStartedState {

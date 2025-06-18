@@ -12,8 +12,7 @@ part of 'getting_started_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$GettingStartedEvent {
@@ -23,14 +22,16 @@ mixin _$GettingStartedEvent {
     required TResult Function() logoShown,
     required TResult Function() nextPressed,
     required TResult Function() skipPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? logoShown,
     TResult? Function()? nextPressed,
     TResult? Function()? skipPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
@@ -38,21 +39,24 @@ mixin _$GettingStartedEvent {
     TResult Function()? nextPressed,
     TResult Function()? skipPressed,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Started value) started,
     required TResult Function(LogoShown value) logoShown,
     required TResult Function(NextPressed value) nextPressed,
     required TResult Function(SkipPressed value) skipPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Started value)? started,
     TResult? Function(LogoShown value)? logoShown,
     TResult? Function(NextPressed value)? nextPressed,
     TResult? Function(SkipPressed value)? skipPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Started value)? started,
@@ -60,15 +64,15 @@ mixin _$GettingStartedEvent {
     TResult Function(NextPressed value)? nextPressed,
     TResult Function(SkipPressed value)? skipPressed,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GettingStartedEventCopyWith<$Res> {
   factory $GettingStartedEventCopyWith(
-    GettingStartedEvent value,
-    $Res Function(GettingStartedEvent) then,
-  ) = _$GettingStartedEventCopyWithImpl<$Res, GettingStartedEvent>;
+          GettingStartedEvent value, $Res Function(GettingStartedEvent) then) =
+      _$GettingStartedEventCopyWithImpl<$Res, GettingStartedEvent>;
 }
 
 /// @nodoc
@@ -88,9 +92,8 @@ class _$GettingStartedEventCopyWithImpl<$Res, $Val extends GettingStartedEvent>
 /// @nodoc
 abstract class _$$StartedImplCopyWith<$Res> {
   factory _$$StartedImplCopyWith(
-    _$StartedImpl value,
-    $Res Function(_$StartedImpl) then,
-  ) = __$$StartedImplCopyWithImpl<$Res>;
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -98,9 +101,8 @@ class __$$StartedImplCopyWithImpl<$Res>
     extends _$GettingStartedEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
-    _$StartedImpl _value,
-    $Res Function(_$StartedImpl) _then,
-  ) : super(_value, _then);
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GettingStartedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -207,9 +209,8 @@ abstract class Started implements GettingStartedEvent {
 /// @nodoc
 abstract class _$$LogoShownImplCopyWith<$Res> {
   factory _$$LogoShownImplCopyWith(
-    _$LogoShownImpl value,
-    $Res Function(_$LogoShownImpl) then,
-  ) = __$$LogoShownImplCopyWithImpl<$Res>;
+          _$LogoShownImpl value, $Res Function(_$LogoShownImpl) then) =
+      __$$LogoShownImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -217,9 +218,8 @@ class __$$LogoShownImplCopyWithImpl<$Res>
     extends _$GettingStartedEventCopyWithImpl<$Res, _$LogoShownImpl>
     implements _$$LogoShownImplCopyWith<$Res> {
   __$$LogoShownImplCopyWithImpl(
-    _$LogoShownImpl _value,
-    $Res Function(_$LogoShownImpl) _then,
-  ) : super(_value, _then);
+      _$LogoShownImpl _value, $Res Function(_$LogoShownImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GettingStartedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -326,9 +326,8 @@ abstract class LogoShown implements GettingStartedEvent {
 /// @nodoc
 abstract class _$$NextPressedImplCopyWith<$Res> {
   factory _$$NextPressedImplCopyWith(
-    _$NextPressedImpl value,
-    $Res Function(_$NextPressedImpl) then,
-  ) = __$$NextPressedImplCopyWithImpl<$Res>;
+          _$NextPressedImpl value, $Res Function(_$NextPressedImpl) then) =
+      __$$NextPressedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -336,9 +335,8 @@ class __$$NextPressedImplCopyWithImpl<$Res>
     extends _$GettingStartedEventCopyWithImpl<$Res, _$NextPressedImpl>
     implements _$$NextPressedImplCopyWith<$Res> {
   __$$NextPressedImplCopyWithImpl(
-    _$NextPressedImpl _value,
-    $Res Function(_$NextPressedImpl) _then,
-  ) : super(_value, _then);
+      _$NextPressedImpl _value, $Res Function(_$NextPressedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GettingStartedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -445,9 +443,8 @@ abstract class NextPressed implements GettingStartedEvent {
 /// @nodoc
 abstract class _$$SkipPressedImplCopyWith<$Res> {
   factory _$$SkipPressedImplCopyWith(
-    _$SkipPressedImpl value,
-    $Res Function(_$SkipPressedImpl) then,
-  ) = __$$SkipPressedImplCopyWithImpl<$Res>;
+          _$SkipPressedImpl value, $Res Function(_$SkipPressedImpl) then) =
+      __$$SkipPressedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -455,9 +452,8 @@ class __$$SkipPressedImplCopyWithImpl<$Res>
     extends _$GettingStartedEventCopyWithImpl<$Res, _$SkipPressedImpl>
     implements _$$SkipPressedImplCopyWith<$Res> {
   __$$SkipPressedImplCopyWithImpl(
-    _$SkipPressedImpl _value,
-    $Res Function(_$SkipPressedImpl) _then,
-  ) : super(_value, _then);
+      _$SkipPressedImpl _value, $Res Function(_$SkipPressedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GettingStartedEvent
   /// with the given fields replaced by the non-null parameter values.

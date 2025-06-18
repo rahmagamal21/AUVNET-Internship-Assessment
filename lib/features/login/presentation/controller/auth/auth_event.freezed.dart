@@ -12,8 +12,7 @@ part of 'auth_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AuthEvent {
@@ -21,34 +20,40 @@ mixin _$AuthEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() loginPressed,
     required TResult Function() signUpPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loginPressed,
     TResult? Function()? signUpPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loginPressed,
     TResult Function()? signUpPressed,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoginPressed value) loginPressed,
     required TResult Function(SignUpPressed value) signUpPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoginPressed value)? loginPressed,
     TResult? Function(SignUpPressed value)? signUpPressed,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginPressed value)? loginPressed,
     TResult Function(SignUpPressed value)? signUpPressed,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -74,9 +79,8 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
 /// @nodoc
 abstract class _$$LoginPressedImplCopyWith<$Res> {
   factory _$$LoginPressedImplCopyWith(
-    _$LoginPressedImpl value,
-    $Res Function(_$LoginPressedImpl) then,
-  ) = __$$LoginPressedImplCopyWithImpl<$Res>;
+          _$LoginPressedImpl value, $Res Function(_$LoginPressedImpl) then) =
+      __$$LoginPressedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -84,9 +88,8 @@ class __$$LoginPressedImplCopyWithImpl<$Res>
     extends _$AuthEventCopyWithImpl<$Res, _$LoginPressedImpl>
     implements _$$LoginPressedImplCopyWith<$Res> {
   __$$LoginPressedImplCopyWithImpl(
-    _$LoginPressedImpl _value,
-    $Res Function(_$LoginPressedImpl) _then,
-  ) : super(_value, _then);
+      _$LoginPressedImpl _value, $Res Function(_$LoginPressedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of AuthEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -181,9 +184,8 @@ abstract class LoginPressed implements AuthEvent {
 /// @nodoc
 abstract class _$$SignUpPressedImplCopyWith<$Res> {
   factory _$$SignUpPressedImplCopyWith(
-    _$SignUpPressedImpl value,
-    $Res Function(_$SignUpPressedImpl) then,
-  ) = __$$SignUpPressedImplCopyWithImpl<$Res>;
+          _$SignUpPressedImpl value, $Res Function(_$SignUpPressedImpl) then) =
+      __$$SignUpPressedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -191,9 +193,8 @@ class __$$SignUpPressedImplCopyWithImpl<$Res>
     extends _$AuthEventCopyWithImpl<$Res, _$SignUpPressedImpl>
     implements _$$SignUpPressedImplCopyWith<$Res> {
   __$$SignUpPressedImplCopyWithImpl(
-    _$SignUpPressedImpl _value,
-    $Res Function(_$SignUpPressedImpl) _then,
-  ) : super(_value, _then);
+      _$SignUpPressedImpl _value, $Res Function(_$SignUpPressedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of AuthEvent
   /// with the given fields replaced by the non-null parameter values.
