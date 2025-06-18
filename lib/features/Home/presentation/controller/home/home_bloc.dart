@@ -11,6 +11,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final GetBannersUseCase getBannersUseCase;
   HomeBloc(this.getBannersUseCase) : super(HomeState.initial()) {
     on<GetBannersEvent>(_onGetBanners);
+    on<UpdateBannerIndex>(_onUpdateBannerIndex);
   }
   Future<void> _onGetBanners(
     GetBannersEvent event,
@@ -27,5 +28,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       log("❌ Error: $e");
       emit(state.copyWith(error: e.toString(), isLoading: false));
     }
+  }
+
+  void _onUpdateBannerIndex(UpdateBannerIndex event, Emitter<HomeState> emit) {
+    emit(state.copyWith(currentBannerIndex: event.index));
   }
 }

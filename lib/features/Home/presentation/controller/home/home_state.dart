@@ -10,7 +10,12 @@ class HomeState with _$HomeState {
     required List<BannerEntity> banners,
     required bool isLoading,
     String? error,
+    required int currentBannerIndex,
   }) = _HomeState;
-  factory HomeState.initial() =>
-      const HomeState(banners: [], isLoading: false, error: null);
+  factory HomeState.initial() => const HomeState(
+    banners: [],
+    isLoading: false,
+    error: null,
+    currentBannerIndex: 0,
+  );
 }
